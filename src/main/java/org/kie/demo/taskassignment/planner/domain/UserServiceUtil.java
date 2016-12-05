@@ -1,0 +1,59 @@
+package org.kie.demo.taskassignment.planner.domain;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+import org.kie.demo.taskassignment.db.UserEntity;
+
+/**
+ * Utility class for convenient retrieving of users from DB
+ */
+public class UserServiceUtil {
+
+    public static final String ADMINISTRATOR_USER_NAME = "Administrator";
+
+    private static EntityManagerFactory emf;
+
+    public static EntityManagerFactory getEmf() {
+        return emf;
+    }
+
+    public static void setEmf(EntityManagerFactory emf) {
+        UserServiceUtil.emf = emf;
+    }
+
+    public static List<User> getAllUsers() {
+        EntityManager em = emf.createEntityManager();
+
+        List<UserEntity> userEntities = em.createQuery("SELECT u from UserEntity u where u.name != '" + ADMINISTRATOR_USER_NAME + "'", UserEntity.class).getResultList();
+
+        List<User> users = userEntities.stream().map(UserServiceUtil::mapUserEntityToUser).collect(Collectors.toList());
+
+        em.close();
+
+        return users;
+    }
+
+
+    private static User mapUserEntityToUser(UserEntity userEntity) {
+        User user = new User();
+        user.setName(userEntity.getName());
+
+        Set<Group> groups = userEntity.getUserGroups().stream().map(userGroupEntity ->
+                new Group(userGroupEntity.getGroup().getName())).collect(Collectors.toSet());
+
+        Map<String, Skill> skills = userEntity.getUserSkills().stream().map(userSkillEntity ->
+                new Skill(userSkillEntity.getSkill().getName(), userSkillEntity.getSkillLevel())).collect(Collectors.toMap(Skill::getName, Function.identity()));
+
+        user.setGroups(groups);
+        user.setSkills(skills);
+
+        return user;
+    }
+}

@@ -1,0 +1,54 @@
+package org.kie.demo.taskassignment.planner;
+    dialect "java"
+
+import org.optaplanner.core.api.score.buildin.bendable.BendableScoreHolder;
+
+import org.kie.demo.taskassignment.planner.domain.TaskPlanningEntity;
+import org.kie.demo.taskassignment.planner.domain.Priority;
+
+
+global BendableScoreHolder scoreHolder;
+
+// ############################################################################
+// Hard constraints
+// ############################################################################
+
+rule "Role requirements"
+    when
+        TaskPlanningEntity(user != null, assignmentFeasible == false)
+    then
+        scoreHolder.addHardConstraintMatch(kcontext, 0, -1);
+end
+
+// ############################################################################
+// Soft constraints
+// ############################################################################
+
+rule "High priority"
+    when
+        TaskPlanningEntity(user != null, priority == Priority.HIGH, $endTime : endTime)
+    then
+        scoreHolder.addSoftConstraintMatch(kcontext, 0, - $endTime);
+end
+
+rule "Minimze makespan (starting with the latest ending employee first)"
+    when
+        TaskPlanningEntity(user != null, nextTask == null, $endTime : endTime)
+    then
+        // Fairness and load balancing trick (see Optaplanner docs): squared to assure correctness in corner cases
+        scoreHolder.addSoftConstraintMatch(kcontext, 1, - ($endTime * $endTime));
+end
+
+rule "Medium priority"
+    when
+        TaskPlanningEntity(user != null, priority == Priority.MEDIUM, $endTime : endTime)
+    then
+        scoreHolder.addSoftConstraintMatch(kcontext, 2, - $endTime);
+end
+
+rule "Low priority"
+    when
+        TaskPlanningEntity(user != null, priority == Priority.LOW, $endTime : endTime)
+    then
+        scoreHolder.addSoftConstraintMatch(kcontext, 3, - $endTime);
+end
