@@ -1,0 +1,448 @@
+[
+  {
+    "user": "Susan",
+    "skills": [
+      {
+        "skill": "management",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "delivering",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "administration",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "calculation",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "riskManagement",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "publicRelations",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "presentation",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "creativity",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "organization",
+        "level": "EXPERT"
+      }
+    ],
+    "groups": [
+      "employeesGroup",
+      "organizersGroup"
+    ]
+  },
+  {
+    "user": "Jane",
+    "skills": [
+      {
+        "skill": "management",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "delivering",
+        "level": "EXPERT"
+      },
+      {
+        "skill": "administration",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "calculation",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "riskManagement",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "publicRelations",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "presentation",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "creativity",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "organization",
+        "level": "BEGINNER"
+      }
+    ],
+    "groups": [
+      "employeesGroup",
+      "marketersGroup"
+    ]
+  },
+  {
+    "user": "Pablo",
+    "skills": [
+      {
+        "skill": "management",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "delivering",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "administration",
+        "level": "EXPERT"
+      },
+      {
+        "skill": "calculation",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "riskManagement",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "publicRelations",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "presentation",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "creativity",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "organization",
+        "level": "BEGINNER"
+      }
+    ],
+    "groups": [
+      "employeesGroup",
+      "marketersGroup"
+    ]
+  },
+  {
+    "user": "Charles",
+    "skills": [
+      {
+        "skill": "management",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "delivering",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "administration",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "calculation",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "riskManagement",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "publicRelations",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "presentation",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "creativity",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "organization",
+        "level": "BEGINNER"
+      }
+    ],
+    "groups": [
+      "marketersGroup",
+      "organizersGroup"
+    ]
+  },
+  {
+    "user": "George",
+    "skills": [
+      {
+        "skill": "management",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "delivering",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "administration",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "calculation",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "riskManagement",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "publicRelations",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "presentation",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "creativity",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "organization",
+        "level": "BEGINNER"
+      }
+    ],
+    "groups": [
+      "employeesGroup",
+      "marketersGroup"
+    ]
+  },
+  {
+    "user": "Vanessa",
+    "skills": [
+      {
+        "skill": "management",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "delivering",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "administration",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "calculation",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "riskManagement",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "publicRelations",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "presentation",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "creativity",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "organization",
+        "level": "BEGINNER"
+      }
+    ],
+    "groups": [
+      "marketersGroup"
+    ]
+  },
+  {
+    "user": "Julia",
+    "skills": [
+      {
+        "skill": "management",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "delivering",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "administration",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "calculation",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "riskManagement",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "publicRelations",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "presentation",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "creativity",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "organization",
+        "level": "BEGINNER"
+      }
+    ],
+    "groups": [
+      "organizersGroup",
+      "designersGroup"
+    ]
+  },
+  {
+    "user": "Kimberly",
+    "skills": [
+      {
+        "skill": "management",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "delivering",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "administration",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "calculation",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "riskManagement",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "publicRelations",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "presentation",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "creativity",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "organization",
+        "level": "BEGINNER"
+      }
+    ],
+    "groups": [
+      "marketersGroup"
+    ]
+  },
+  {
+    "user": "Carlos",
+    "skills": [
+      {
+        "skill": "management",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "delivering",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "administration",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "calculation",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "riskManagement",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "publicRelations",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "presentation",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "creativity",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "organization",
+        "level": "BEGINNER"
+      }
+    ],
+    "groups": [
+      "designersGroup"
+    ]
+  },
+  {
+    "user": "Jean",
+    "skills": [
+      {
+        "skill": "management",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "delivering",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "administration",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "calculation",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "riskManagement",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "publicRelations",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "presentation",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "creativity",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "organization",
+        "level": "BEGINNER"
+      }
+    ],
+    "groups": [
+      "designersGroup"
+    ]
+  }
+]

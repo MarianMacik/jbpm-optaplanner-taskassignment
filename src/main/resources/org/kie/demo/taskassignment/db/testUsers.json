@@ -1,0 +1,53 @@
+[
+  {
+    "user": "Administrator",
+    "skills": [],
+    "groups": []
+  },
+  {
+    "user": "Mary",
+    "skills": [
+      {
+        "skill": "management",
+        "level": "EXPERT"
+      },
+      {
+        "skill": "delivering",
+        "level": "BEGINNER"
+      }
+    ],
+    "groups": [
+      "suppliers"
+    ]
+  },
+  {
+    "user": "John",
+    "skills": [
+      {
+        "skill": "management",
+        "level": "BEGINNER"
+      },
+      {
+        "skill": "delivering",
+        "level": "EXPERT"
+      }
+    ],
+    "groups": [
+      "managers"
+    ]
+  },
+  {
+    "user": "Marian",
+    "skills": [
+      {
+        "skill": "management",
+        "level": "ADVANCED"
+      },
+      {
+        "skill": "delivering",
+        "level": "ADVANCED"
+      }
+    ],
+    "groups": []
+  }
+]
