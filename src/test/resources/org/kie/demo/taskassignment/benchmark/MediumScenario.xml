@@ -1,0 +1,3862 @@
+<TaskAssigningSolution id="1">
+  <userList id="2">
+    <User id="3">
+      <name>Mary</name>
+      <groups id="4">
+        <Group id="5">
+          <name>suppliersGroup</name>
+        </Group>
+      </groups>
+      <skills id="6">
+        <entry>
+          <string>presentation</string>
+          <Skill id="7">
+            <name>presentation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>calculation</string>
+          <Skill id="8">
+            <name>calculation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>delivering</string>
+          <Skill id="9">
+            <name>delivering</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>management</string>
+          <Skill id="10">
+            <name>management</name>
+            <skillLevel>EXPERT</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>administration</string>
+          <Skill id="11">
+            <name>administration</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>organization</string>
+          <Skill id="12">
+            <name>organization</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>publicRelations</string>
+          <Skill id="13">
+            <name>publicRelations</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>creativity</string>
+          <Skill id="14">
+            <name>creativity</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>riskManagement</string>
+          <Skill id="15">
+            <name>riskManagement</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+      </skills>
+    </User>
+    <User id="16">
+      <name>John</name>
+      <groups id="17">
+        <Group id="18">
+          <name>managersGroup</name>
+        </Group>
+      </groups>
+      <skills id="19">
+        <entry>
+          <string>presentation</string>
+          <Skill id="20">
+            <name>presentation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>calculation</string>
+          <Skill id="21">
+            <name>calculation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>delivering</string>
+          <Skill id="22">
+            <name>delivering</name>
+            <skillLevel>EXPERT</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>management</string>
+          <Skill id="23">
+            <name>management</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>administration</string>
+          <Skill id="24">
+            <name>administration</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>organization</string>
+          <Skill id="25">
+            <name>organization</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>publicRelations</string>
+          <Skill id="26">
+            <name>publicRelations</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>creativity</string>
+          <Skill id="27">
+            <name>creativity</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>riskManagement</string>
+          <Skill id="28">
+            <name>riskManagement</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+      </skills>
+    </User>
+    <User id="29">
+      <name>Marian</name>
+      <groups id="30">
+        <Group id="31">
+          <name>employeesGroup</name>
+        </Group>
+      </groups>
+      <skills id="32">
+        <entry>
+          <string>delivering</string>
+          <Skill id="33">
+            <name>delivering</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>presentation</string>
+          <Skill id="34">
+            <name>presentation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>calculation</string>
+          <Skill id="35">
+            <name>calculation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>management</string>
+          <Skill id="36">
+            <name>management</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>administration</string>
+          <Skill id="37">
+            <name>administration</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>organization</string>
+          <Skill id="38">
+            <name>organization</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>publicRelations</string>
+          <Skill id="39">
+            <name>publicRelations</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>creativity</string>
+          <Skill id="40">
+            <name>creativity</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>riskManagement</string>
+          <Skill id="41">
+            <name>riskManagement</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+      </skills>
+    </User>
+    <User id="42">
+      <name>Natalie</name>
+      <groups id="43">
+        <Group id="44">
+          <name>managersGroup</name>
+        </Group>
+      </groups>
+      <skills id="45">
+        <entry>
+          <string>presentation</string>
+          <Skill id="46">
+            <name>presentation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>calculation</string>
+          <Skill id="47">
+            <name>calculation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>delivering</string>
+          <Skill id="48">
+            <name>delivering</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>management</string>
+          <Skill id="49">
+            <name>management</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>administration</string>
+          <Skill id="50">
+            <name>administration</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>organization</string>
+          <Skill id="51">
+            <name>organization</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>publicRelations</string>
+          <Skill id="52">
+            <name>publicRelations</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>creativity</string>
+          <Skill id="53">
+            <name>creativity</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>riskManagement</string>
+          <Skill id="54">
+            <name>riskManagement</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+      </skills>
+    </User>
+    <User id="55">
+      <name>Thomas</name>
+      <groups id="56">
+        <Group id="57">
+          <name>organizersGroup</name>
+        </Group>
+        <Group id="58">
+          <name>employeesGroup</name>
+        </Group>
+      </groups>
+      <skills id="59">
+        <entry>
+          <string>presentation</string>
+          <Skill id="60">
+            <name>presentation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>calculation</string>
+          <Skill id="61">
+            <name>calculation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>delivering</string>
+          <Skill id="62">
+            <name>delivering</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>management</string>
+          <Skill id="63">
+            <name>management</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>administration</string>
+          <Skill id="64">
+            <name>administration</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>organization</string>
+          <Skill id="65">
+            <name>organization</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>publicRelations</string>
+          <Skill id="66">
+            <name>publicRelations</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>creativity</string>
+          <Skill id="67">
+            <name>creativity</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>riskManagement</string>
+          <Skill id="68">
+            <name>riskManagement</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+      </skills>
+    </User>
+    <User id="69">
+      <name>James</name>
+      <groups id="70">
+        <Group id="71">
+          <name>managersGroup</name>
+        </Group>
+      </groups>
+      <skills id="72">
+        <entry>
+          <string>calculation</string>
+          <Skill id="73">
+            <name>calculation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>presentation</string>
+          <Skill id="74">
+            <name>presentation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>delivering</string>
+          <Skill id="75">
+            <name>delivering</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>management</string>
+          <Skill id="76">
+            <name>management</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>administration</string>
+          <Skill id="77">
+            <name>administration</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>organization</string>
+          <Skill id="78">
+            <name>organization</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>publicRelations</string>
+          <Skill id="79">
+            <name>publicRelations</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>creativity</string>
+          <Skill id="80">
+            <name>creativity</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>riskManagement</string>
+          <Skill id="81">
+            <name>riskManagement</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+      </skills>
+    </User>
+    <User id="82">
+      <name>Gary</name>
+      <groups id="83">
+        <Group id="84">
+          <name>economistsGroup</name>
+        </Group>
+      </groups>
+      <skills id="85">
+        <entry>
+          <string>presentation</string>
+          <Skill id="86">
+            <name>presentation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>calculation</string>
+          <Skill id="87">
+            <name>calculation</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>delivering</string>
+          <Skill id="88">
+            <name>delivering</name>
+            <skillLevel>EXPERT</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>management</string>
+          <Skill id="89">
+            <name>management</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>administration</string>
+          <Skill id="90">
+            <name>administration</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>organization</string>
+          <Skill id="91">
+            <name>organization</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>publicRelations</string>
+          <Skill id="92">
+            <name>publicRelations</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>creativity</string>
+          <Skill id="93">
+            <name>creativity</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>riskManagement</string>
+          <Skill id="94">
+            <name>riskManagement</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+      </skills>
+    </User>
+    <User id="95">
+      <name>Mark</name>
+      <groups id="96">
+        <Group id="97">
+          <name>managersGroup</name>
+        </Group>
+      </groups>
+      <skills id="98">
+        <entry>
+          <string>presentation</string>
+          <Skill id="99">
+            <name>presentation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>calculation</string>
+          <Skill id="100">
+            <name>calculation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>delivering</string>
+          <Skill id="101">
+            <name>delivering</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>management</string>
+          <Skill id="102">
+            <name>management</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>administration</string>
+          <Skill id="103">
+            <name>administration</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>organization</string>
+          <Skill id="104">
+            <name>organization</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>publicRelations</string>
+          <Skill id="105">
+            <name>publicRelations</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>creativity</string>
+          <Skill id="106">
+            <name>creativity</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>riskManagement</string>
+          <Skill id="107">
+            <name>riskManagement</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+      </skills>
+    </User>
+    <User id="108">
+      <name>Martin</name>
+      <groups id="109">
+        <Group id="110">
+          <name>economistsGroup</name>
+        </Group>
+      </groups>
+      <skills id="111">
+        <entry>
+          <string>presentation</string>
+          <Skill id="112">
+            <name>presentation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>calculation</string>
+          <Skill id="113">
+            <name>calculation</name>
+            <skillLevel>EXPERT</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>delivering</string>
+          <Skill id="114">
+            <name>delivering</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>management</string>
+          <Skill id="115">
+            <name>management</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>administration</string>
+          <Skill id="116">
+            <name>administration</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>organization</string>
+          <Skill id="117">
+            <name>organization</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>publicRelations</string>
+          <Skill id="118">
+            <name>publicRelations</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>creativity</string>
+          <Skill id="119">
+            <name>creativity</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>riskManagement</string>
+          <Skill id="120">
+            <name>riskManagement</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+      </skills>
+    </User>
+    <User id="121">
+      <name>Peter</name>
+      <groups id="122">
+        <Group id="123">
+          <name>employeesGroup</name>
+        </Group>
+        <Group id="124">
+          <name>organizersGroup</name>
+        </Group>
+      </groups>
+      <skills id="125">
+        <entry>
+          <string>calculation</string>
+          <Skill id="126">
+            <name>calculation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>presentation</string>
+          <Skill id="127">
+            <name>presentation</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>delivering</string>
+          <Skill id="128">
+            <name>delivering</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>management</string>
+          <Skill id="129">
+            <name>management</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>administration</string>
+          <Skill id="130">
+            <name>administration</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>organization</string>
+          <Skill id="131">
+            <name>organization</name>
+            <skillLevel>ADVANCED</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>publicRelations</string>
+          <Skill id="132">
+            <name>publicRelations</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>creativity</string>
+          <Skill id="133">
+            <name>creativity</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+        <entry>
+          <string>riskManagement</string>
+          <Skill id="134">
+            <name>riskManagement</name>
+            <skillLevel>BEGINNER</skillLevel>
+          </Skill>
+        </entry>
+      </skills>
+    </User>
+  </userList>
+  <taskList id="135">
+    <TaskPlanningEntity id="136">
+      <id>97</id>
+      <name>Accept Order</name>
+      <actualOwner>John</actualOwner>
+      <potentialUserOwners id="137">
+        <string>John</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="138"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="139">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>manager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="140">
+      <id>98</id>
+      <name>Deliver Goods</name>
+      <potentialUserOwners id="141">
+        <string>Marian</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="142">
+        <Group id="143">
+          <name>suppliersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>60</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>delivering</skill>
+      <inputVariables id="144">
+        <entry>
+          <string>Skill</string>
+          <string>delivering</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>60</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>supplier</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>suppliers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="145">
+      <id>99</id>
+      <name>Accept Order</name>
+      <actualOwner>John</actualOwner>
+      <potentialUserOwners id="146">
+        <string>John</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="147"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="148">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>manager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="149">
+      <id>100</id>
+      <name>Deliver Goods</name>
+      <potentialUserOwners id="150">
+        <string>Marian</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="151">
+        <Group id="152">
+          <name>suppliersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>60</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>delivering</skill>
+      <inputVariables id="153">
+        <entry>
+          <string>Skill</string>
+          <string>delivering</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>60</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>supplier</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>suppliers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="154">
+      <id>101</id>
+      <name>Accept Order</name>
+      <actualOwner>John</actualOwner>
+      <potentialUserOwners id="155">
+        <string>John</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="156"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="157">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>manager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="158">
+      <id>102</id>
+      <name>Deliver Goods</name>
+      <potentialUserOwners id="159">
+        <string>Marian</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="160">
+        <Group id="161">
+          <name>suppliersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>60</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>delivering</skill>
+      <inputVariables id="162">
+        <entry>
+          <string>Skill</string>
+          <string>delivering</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>60</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>supplier</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>suppliers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="163">
+      <id>103</id>
+      <name>Accept Order</name>
+      <actualOwner>John</actualOwner>
+      <potentialUserOwners id="164">
+        <string>John</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="165"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="166">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>manager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="167">
+      <id>104</id>
+      <name>Deliver Goods</name>
+      <potentialUserOwners id="168">
+        <string>Marian</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="169">
+        <Group id="170">
+          <name>suppliersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>60</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>delivering</skill>
+      <inputVariables id="171">
+        <entry>
+          <string>Skill</string>
+          <string>delivering</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>60</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>supplier</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>suppliers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="172">
+      <id>105</id>
+      <name>Accept Order</name>
+      <actualOwner>John</actualOwner>
+      <potentialUserOwners id="173">
+        <string>John</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="174"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="175">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>manager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="176">
+      <id>106</id>
+      <name>Deliver Goods</name>
+      <potentialUserOwners id="177">
+        <string>Marian</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="178">
+        <Group id="179">
+          <name>suppliersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>60</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>delivering</skill>
+      <inputVariables id="180">
+        <entry>
+          <string>Skill</string>
+          <string>delivering</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>60</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>supplier</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>suppliers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="181">
+      <id>107</id>
+      <name>Accept Order</name>
+      <actualOwner>John</actualOwner>
+      <potentialUserOwners id="182">
+        <string>John</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="183"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="184">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>manager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="185">
+      <id>108</id>
+      <name>Deliver Goods</name>
+      <potentialUserOwners id="186">
+        <string>Marian</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="187">
+        <Group id="188">
+          <name>suppliersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>60</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>delivering</skill>
+      <inputVariables id="189">
+        <entry>
+          <string>Skill</string>
+          <string>delivering</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>60</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>supplier</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>suppliers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="190">
+      <id>109</id>
+      <name>Accept Order</name>
+      <actualOwner>John</actualOwner>
+      <potentialUserOwners id="191">
+        <string>John</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="192"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="193">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>manager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="194">
+      <id>110</id>
+      <name>Deliver Goods</name>
+      <potentialUserOwners id="195">
+        <string>Marian</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="196">
+        <Group id="197">
+          <name>suppliersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>60</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>delivering</skill>
+      <inputVariables id="198">
+        <entry>
+          <string>Skill</string>
+          <string>delivering</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>60</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>supplier</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>suppliers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="199">
+      <id>111</id>
+      <name>Accept Order</name>
+      <actualOwner>John</actualOwner>
+      <potentialUserOwners id="200">
+        <string>John</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="201"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="202">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>manager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="203">
+      <id>112</id>
+      <name>Deliver Goods</name>
+      <potentialUserOwners id="204">
+        <string>Marian</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="205">
+        <Group id="206">
+          <name>suppliersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>60</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>delivering</skill>
+      <inputVariables id="207">
+        <entry>
+          <string>Skill</string>
+          <string>delivering</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>60</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>supplier</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>suppliers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="208">
+      <id>113</id>
+      <name>Accept Order</name>
+      <actualOwner>John</actualOwner>
+      <potentialUserOwners id="209">
+        <string>John</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="210"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="211">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>manager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="212">
+      <id>114</id>
+      <name>Deliver Goods</name>
+      <potentialUserOwners id="213">
+        <string>Marian</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="214">
+        <Group id="215">
+          <name>suppliersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>60</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>delivering</skill>
+      <inputVariables id="216">
+        <entry>
+          <string>Skill</string>
+          <string>delivering</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>60</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>supplier</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>suppliers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="217">
+      <id>115</id>
+      <name>Accept Order</name>
+      <actualOwner>John</actualOwner>
+      <potentialUserOwners id="218">
+        <string>John</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="219"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="220">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Accept Order</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>manager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="221">
+      <id>116</id>
+      <name>Deliver Goods</name>
+      <potentialUserOwners id="222">
+        <string>Marian</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="223">
+        <Group id="224">
+          <name>suppliersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>60</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>delivering</skill>
+      <inputVariables id="225">
+        <entry>
+          <string>Skill</string>
+          <string>delivering</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>60</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Deliver Goods</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>supplier</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>suppliers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="226">
+      <id>117</id>
+      <name>Review Docs</name>
+      <potentialUserOwners id="227"/>
+      <potentialGroupOwners id="228">
+        <Group id="229">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>45</baseDuration>
+      <status>Ready</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="230">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>45</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="231">
+      <id>118</id>
+      <name>Prepare Docs</name>
+      <potentialUserOwners id="232"/>
+      <potentialGroupOwners id="233">
+        <Group id="234">
+          <name>employeesGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>40</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>administration</skill>
+      <inputVariables id="235">
+        <entry>
+          <string>Skill</string>
+          <string>administration</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>40</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>officeEmployees</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="236">
+      <id>119</id>
+      <name>Review Docs</name>
+      <potentialUserOwners id="237"/>
+      <potentialGroupOwners id="238">
+        <Group id="239">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>45</baseDuration>
+      <status>Ready</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="240">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>45</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="241">
+      <id>120</id>
+      <name>Prepare Docs</name>
+      <potentialUserOwners id="242"/>
+      <potentialGroupOwners id="243">
+        <Group id="244">
+          <name>employeesGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>40</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>administration</skill>
+      <inputVariables id="245">
+        <entry>
+          <string>Skill</string>
+          <string>administration</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>40</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>officeEmployees</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="246">
+      <id>121</id>
+      <name>Review Docs</name>
+      <potentialUserOwners id="247"/>
+      <potentialGroupOwners id="248">
+        <Group id="249">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>45</baseDuration>
+      <status>Ready</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="250">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>45</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="251">
+      <id>122</id>
+      <name>Prepare Docs</name>
+      <potentialUserOwners id="252"/>
+      <potentialGroupOwners id="253">
+        <Group id="254">
+          <name>employeesGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>40</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>administration</skill>
+      <inputVariables id="255">
+        <entry>
+          <string>Skill</string>
+          <string>administration</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>40</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>officeEmployees</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="256">
+      <id>123</id>
+      <name>Review Docs</name>
+      <potentialUserOwners id="257"/>
+      <potentialGroupOwners id="258">
+        <Group id="259">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>45</baseDuration>
+      <status>Ready</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="260">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>45</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="261">
+      <id>124</id>
+      <name>Prepare Docs</name>
+      <potentialUserOwners id="262"/>
+      <potentialGroupOwners id="263">
+        <Group id="264">
+          <name>employeesGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>40</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>administration</skill>
+      <inputVariables id="265">
+        <entry>
+          <string>Skill</string>
+          <string>administration</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>40</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>officeEmployees</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="266">
+      <id>125</id>
+      <name>Review Docs</name>
+      <potentialUserOwners id="267"/>
+      <potentialGroupOwners id="268">
+        <Group id="269">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>45</baseDuration>
+      <status>Ready</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="270">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>45</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="271">
+      <id>126</id>
+      <name>Prepare Docs</name>
+      <potentialUserOwners id="272"/>
+      <potentialGroupOwners id="273">
+        <Group id="274">
+          <name>employeesGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>40</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>administration</skill>
+      <inputVariables id="275">
+        <entry>
+          <string>Skill</string>
+          <string>administration</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>40</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>officeEmployees</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="276">
+      <id>127</id>
+      <name>Review Docs</name>
+      <potentialUserOwners id="277"/>
+      <potentialGroupOwners id="278">
+        <Group id="279">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>45</baseDuration>
+      <status>Ready</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="280">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>45</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="281">
+      <id>128</id>
+      <name>Prepare Docs</name>
+      <potentialUserOwners id="282"/>
+      <potentialGroupOwners id="283">
+        <Group id="284">
+          <name>employeesGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>40</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>administration</skill>
+      <inputVariables id="285">
+        <entry>
+          <string>Skill</string>
+          <string>administration</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>40</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>officeEmployees</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="286">
+      <id>129</id>
+      <name>Review Docs</name>
+      <potentialUserOwners id="287"/>
+      <potentialGroupOwners id="288">
+        <Group id="289">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>45</baseDuration>
+      <status>Ready</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="290">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>45</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="291">
+      <id>130</id>
+      <name>Prepare Docs</name>
+      <potentialUserOwners id="292"/>
+      <potentialGroupOwners id="293">
+        <Group id="294">
+          <name>employeesGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>40</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>administration</skill>
+      <inputVariables id="295">
+        <entry>
+          <string>Skill</string>
+          <string>administration</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>40</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>officeEmployees</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="296">
+      <id>131</id>
+      <name>Review Docs</name>
+      <potentialUserOwners id="297"/>
+      <potentialGroupOwners id="298">
+        <Group id="299">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>45</baseDuration>
+      <status>Ready</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="300">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>45</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="301">
+      <id>132</id>
+      <name>Prepare Docs</name>
+      <potentialUserOwners id="302"/>
+      <potentialGroupOwners id="303">
+        <Group id="304">
+          <name>employeesGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>40</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>administration</skill>
+      <inputVariables id="305">
+        <entry>
+          <string>Skill</string>
+          <string>administration</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>40</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>officeEmployees</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="306">
+      <id>133</id>
+      <name>Review Docs</name>
+      <potentialUserOwners id="307"/>
+      <potentialGroupOwners id="308">
+        <Group id="309">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>45</baseDuration>
+      <status>Ready</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="310">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>45</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="311">
+      <id>134</id>
+      <name>Prepare Docs</name>
+      <potentialUserOwners id="312"/>
+      <potentialGroupOwners id="313">
+        <Group id="314">
+          <name>employeesGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>40</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>administration</skill>
+      <inputVariables id="315">
+        <entry>
+          <string>Skill</string>
+          <string>administration</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>40</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>officeEmployees</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="316">
+      <id>135</id>
+      <name>Review Docs</name>
+      <potentialUserOwners id="317"/>
+      <potentialGroupOwners id="318">
+        <Group id="319">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>45</baseDuration>
+      <status>Ready</status>
+      <priority>LOW</priority>
+      <skill>management</skill>
+      <inputVariables id="320">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>45</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Review Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="321">
+      <id>136</id>
+      <name>Prepare Docs</name>
+      <potentialUserOwners id="322"/>
+      <potentialGroupOwners id="323">
+        <Group id="324">
+          <name>employeesGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>40</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>administration</skill>
+      <inputVariables id="325">
+        <entry>
+          <string>Skill</string>
+          <string>administration</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>40</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Prepare Docs</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>officeEmployees</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="326">
+      <id>137</id>
+      <name>Consult contract</name>
+      <potentialUserOwners id="327"/>
+      <potentialGroupOwners id="328">
+        <Group id="329">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>50</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>management</skill>
+      <inputVariables id="330">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>50</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="331">
+      <id>138</id>
+      <name>Calculate Offer</name>
+      <potentialUserOwners id="332"/>
+      <potentialGroupOwners id="333">
+        <Group id="334">
+          <name>economistsGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>55</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>calculation</skill>
+      <inputVariables id="335">
+        <entry>
+          <string>Skill</string>
+          <string>calculation</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>55</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>economists</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="336">
+      <id>139</id>
+      <name>Approve Contract</name>
+      <actualOwner>Mark</actualOwner>
+      <potentialUserOwners id="337">
+        <string>Mark</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="338"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>MEDIUM</priority>
+      <skill>riskManagement</skill>
+      <inputVariables id="339">
+        <entry>
+          <string>Skill</string>
+          <string>riskManagement</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>headManager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="340">
+      <id>140</id>
+      <name>Consult contract</name>
+      <potentialUserOwners id="341"/>
+      <potentialGroupOwners id="342">
+        <Group id="343">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>50</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>management</skill>
+      <inputVariables id="344">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>50</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="345">
+      <id>141</id>
+      <name>Calculate Offer</name>
+      <potentialUserOwners id="346"/>
+      <potentialGroupOwners id="347">
+        <Group id="348">
+          <name>economistsGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>55</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>calculation</skill>
+      <inputVariables id="349">
+        <entry>
+          <string>Skill</string>
+          <string>calculation</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>55</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>economists</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="350">
+      <id>142</id>
+      <name>Approve Contract</name>
+      <actualOwner>Mark</actualOwner>
+      <potentialUserOwners id="351">
+        <string>Mark</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="352"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>MEDIUM</priority>
+      <skill>riskManagement</skill>
+      <inputVariables id="353">
+        <entry>
+          <string>Skill</string>
+          <string>riskManagement</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>headManager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="354">
+      <id>143</id>
+      <name>Consult contract</name>
+      <potentialUserOwners id="355"/>
+      <potentialGroupOwners id="356">
+        <Group id="357">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>50</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>management</skill>
+      <inputVariables id="358">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>50</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="359">
+      <id>144</id>
+      <name>Calculate Offer</name>
+      <potentialUserOwners id="360"/>
+      <potentialGroupOwners id="361">
+        <Group id="362">
+          <name>economistsGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>55</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>calculation</skill>
+      <inputVariables id="363">
+        <entry>
+          <string>Skill</string>
+          <string>calculation</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>55</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>economists</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="364">
+      <id>145</id>
+      <name>Approve Contract</name>
+      <actualOwner>Mark</actualOwner>
+      <potentialUserOwners id="365">
+        <string>Mark</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="366"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>MEDIUM</priority>
+      <skill>riskManagement</skill>
+      <inputVariables id="367">
+        <entry>
+          <string>Skill</string>
+          <string>riskManagement</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>headManager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="368">
+      <id>146</id>
+      <name>Consult contract</name>
+      <potentialUserOwners id="369"/>
+      <potentialGroupOwners id="370">
+        <Group id="371">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>50</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>management</skill>
+      <inputVariables id="372">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>50</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="373">
+      <id>147</id>
+      <name>Calculate Offer</name>
+      <potentialUserOwners id="374"/>
+      <potentialGroupOwners id="375">
+        <Group id="376">
+          <name>economistsGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>55</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>calculation</skill>
+      <inputVariables id="377">
+        <entry>
+          <string>Skill</string>
+          <string>calculation</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>55</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>economists</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="378">
+      <id>148</id>
+      <name>Approve Contract</name>
+      <actualOwner>Mark</actualOwner>
+      <potentialUserOwners id="379">
+        <string>Mark</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="380"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>MEDIUM</priority>
+      <skill>riskManagement</skill>
+      <inputVariables id="381">
+        <entry>
+          <string>Skill</string>
+          <string>riskManagement</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>headManager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="382">
+      <id>149</id>
+      <name>Consult contract</name>
+      <potentialUserOwners id="383"/>
+      <potentialGroupOwners id="384">
+        <Group id="385">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>50</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>management</skill>
+      <inputVariables id="386">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>50</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="387">
+      <id>150</id>
+      <name>Calculate Offer</name>
+      <potentialUserOwners id="388"/>
+      <potentialGroupOwners id="389">
+        <Group id="390">
+          <name>economistsGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>55</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>calculation</skill>
+      <inputVariables id="391">
+        <entry>
+          <string>Skill</string>
+          <string>calculation</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>55</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>economists</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="392">
+      <id>151</id>
+      <name>Approve Contract</name>
+      <actualOwner>Mark</actualOwner>
+      <potentialUserOwners id="393">
+        <string>Mark</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="394"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>MEDIUM</priority>
+      <skill>riskManagement</skill>
+      <inputVariables id="395">
+        <entry>
+          <string>Skill</string>
+          <string>riskManagement</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>headManager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="396">
+      <id>152</id>
+      <name>Consult contract</name>
+      <potentialUserOwners id="397"/>
+      <potentialGroupOwners id="398">
+        <Group id="399">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>50</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>management</skill>
+      <inputVariables id="400">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>50</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="401">
+      <id>153</id>
+      <name>Calculate Offer</name>
+      <potentialUserOwners id="402"/>
+      <potentialGroupOwners id="403">
+        <Group id="404">
+          <name>economistsGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>55</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>calculation</skill>
+      <inputVariables id="405">
+        <entry>
+          <string>Skill</string>
+          <string>calculation</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>55</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>economists</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="406">
+      <id>154</id>
+      <name>Approve Contract</name>
+      <actualOwner>Mark</actualOwner>
+      <potentialUserOwners id="407">
+        <string>Mark</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="408"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>MEDIUM</priority>
+      <skill>riskManagement</skill>
+      <inputVariables id="409">
+        <entry>
+          <string>Skill</string>
+          <string>riskManagement</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>headManager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="410">
+      <id>155</id>
+      <name>Consult contract</name>
+      <potentialUserOwners id="411"/>
+      <potentialGroupOwners id="412">
+        <Group id="413">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>50</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>management</skill>
+      <inputVariables id="414">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>50</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="415">
+      <id>156</id>
+      <name>Calculate Offer</name>
+      <potentialUserOwners id="416"/>
+      <potentialGroupOwners id="417">
+        <Group id="418">
+          <name>economistsGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>55</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>calculation</skill>
+      <inputVariables id="419">
+        <entry>
+          <string>Skill</string>
+          <string>calculation</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>55</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>economists</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="420">
+      <id>157</id>
+      <name>Approve Contract</name>
+      <actualOwner>Mark</actualOwner>
+      <potentialUserOwners id="421">
+        <string>Mark</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="422"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>MEDIUM</priority>
+      <skill>riskManagement</skill>
+      <inputVariables id="423">
+        <entry>
+          <string>Skill</string>
+          <string>riskManagement</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>headManager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="424">
+      <id>158</id>
+      <name>Consult contract</name>
+      <potentialUserOwners id="425"/>
+      <potentialGroupOwners id="426">
+        <Group id="427">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>50</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>management</skill>
+      <inputVariables id="428">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>50</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="429">
+      <id>159</id>
+      <name>Calculate Offer</name>
+      <potentialUserOwners id="430"/>
+      <potentialGroupOwners id="431">
+        <Group id="432">
+          <name>economistsGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>55</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>calculation</skill>
+      <inputVariables id="433">
+        <entry>
+          <string>Skill</string>
+          <string>calculation</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>55</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>economists</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="434">
+      <id>160</id>
+      <name>Approve Contract</name>
+      <actualOwner>Mark</actualOwner>
+      <potentialUserOwners id="435">
+        <string>Mark</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="436"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>MEDIUM</priority>
+      <skill>riskManagement</skill>
+      <inputVariables id="437">
+        <entry>
+          <string>Skill</string>
+          <string>riskManagement</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>headManager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="438">
+      <id>161</id>
+      <name>Consult contract</name>
+      <potentialUserOwners id="439"/>
+      <potentialGroupOwners id="440">
+        <Group id="441">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>50</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>management</skill>
+      <inputVariables id="442">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>50</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="443">
+      <id>162</id>
+      <name>Calculate Offer</name>
+      <potentialUserOwners id="444"/>
+      <potentialGroupOwners id="445">
+        <Group id="446">
+          <name>economistsGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>55</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>calculation</skill>
+      <inputVariables id="447">
+        <entry>
+          <string>Skill</string>
+          <string>calculation</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>55</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>economists</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="448">
+      <id>163</id>
+      <name>Approve Contract</name>
+      <actualOwner>Mark</actualOwner>
+      <potentialUserOwners id="449">
+        <string>Mark</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="450"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>MEDIUM</priority>
+      <skill>riskManagement</skill>
+      <inputVariables id="451">
+        <entry>
+          <string>Skill</string>
+          <string>riskManagement</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>headManager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="452">
+      <id>164</id>
+      <name>Consult contract</name>
+      <potentialUserOwners id="453"/>
+      <potentialGroupOwners id="454">
+        <Group id="455">
+          <name>managersGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>50</baseDuration>
+      <status>Ready</status>
+      <priority>MEDIUM</priority>
+      <skill>management</skill>
+      <inputVariables id="456">
+        <entry>
+          <string>Skill</string>
+          <string>management</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>50</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Consult contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>managers</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="457">
+      <id>165</id>
+      <name>Calculate Offer</name>
+      <potentialUserOwners id="458"/>
+      <potentialGroupOwners id="459">
+        <Group id="460">
+          <name>economistsGroup</name>
+        </Group>
+      </potentialGroupOwners>
+      <baseDuration>55</baseDuration>
+      <status>Ready</status>
+      <priority>HIGH</priority>
+      <skill>calculation</skill>
+      <inputVariables id="461">
+        <entry>
+          <string>Skill</string>
+          <string>calculation</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>55</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Calculate Offer</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>3</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>GroupId</string>
+          <string>economists</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+    <TaskPlanningEntity id="462">
+      <id>166</id>
+      <name>Approve Contract</name>
+      <actualOwner>Mark</actualOwner>
+      <potentialUserOwners id="463">
+        <string>Mark</string>
+      </potentialUserOwners>
+      <potentialGroupOwners id="464"/>
+      <baseDuration>30</baseDuration>
+      <status>Reserved</status>
+      <priority>MEDIUM</priority>
+      <skill>riskManagement</skill>
+      <inputVariables id="465">
+        <entry>
+          <string>Skill</string>
+          <string>riskManagement</string>
+        </entry>
+        <entry>
+          <string>TaskName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>BaseDuration</string>
+          <string>30</string>
+        </entry>
+        <entry>
+          <string>NodeName</string>
+          <string>Approve Contract</string>
+        </entry>
+        <entry>
+          <string>Priority</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>Skippable</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>ActorId</string>
+          <string>headManager</string>
+        </entry>
+      </inputVariables>
+    </TaskPlanningEntity>
+  </taskList>
+</TaskAssigningSolution>
