@@ -1,5 +1,8 @@
 package org.kie.demo.taskassignment.planner.domain;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("Skill")
 public class Skill {
 
     private String name;

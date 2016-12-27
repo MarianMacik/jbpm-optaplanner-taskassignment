@@ -1,16 +1,28 @@
 package org.kie.demo.taskassignment.planner.domain;
 
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("User")
 public class User extends TaskOrUser {
 
     private String name;
 
-    private Set<Group> groups;
+    private Set<Group> groups = new HashSet<>();
 
     // name of the skill and particular skill object (also with skillLevel)
-    private Map<String, Skill> skills;
+    private Map<String, Skill> skills = new HashMap<>();
+
+    public User() {
+    }
+
+    public User(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;

@@ -2,14 +2,18 @@ package org.kie.demo.taskassignment.planner.domain;
 
 import java.util.List;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamConverter;
 import org.optaplanner.core.api.domain.solution.PlanningEntityCollectionProperty;
 import org.optaplanner.core.api.domain.solution.PlanningScore;
 import org.optaplanner.core.api.domain.solution.PlanningSolution;
 import org.optaplanner.core.api.domain.solution.drools.ProblemFactCollectionProperty;
 import org.optaplanner.core.api.domain.valuerange.ValueRangeProvider;
 import org.optaplanner.core.api.score.buildin.bendable.BendableScore;
+import org.optaplanner.persistence.xstream.api.score.buildin.bendable.BendableScoreXStreamConverter;
 
 @PlanningSolution
+@XStreamAlias("TaskAssigningSolution")
 public class TaskAssigningSolution {
 
     // Other problem facts might be added later when needed
@@ -23,7 +27,7 @@ public class TaskAssigningSolution {
     @ValueRangeProvider(id = "taskRange")
     private List<TaskPlanningEntity> taskList;
 
-
+    @XStreamConverter(BendableScoreXStreamConverter.class)
     @PlanningScore(bendableHardLevelsSize = 1, bendableSoftLevelsSize = 4)
     private BendableScore score;
 

@@ -1,5 +1,8 @@
 package org.kie.demo.taskassignment.planner.domain;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("Group")
 public class Group {
 
     private String name;
@@ -33,5 +36,12 @@ public class Group {
     @Override
     public int hashCode() {
         return name != null ? name.hashCode() : 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Group{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }

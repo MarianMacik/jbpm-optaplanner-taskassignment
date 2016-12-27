@@ -1,5 +1,8 @@
 package org.kie.demo.taskassignment.planner.domain;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("SkillLevel")
 public enum SkillLevel {
     NONE(4),  // only for score calculation in case no user is assigned to a task
     BEGINNER(3),

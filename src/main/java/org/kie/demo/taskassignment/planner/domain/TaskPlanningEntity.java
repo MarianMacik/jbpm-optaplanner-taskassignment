@@ -5,8 +5,10 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 import org.kie.api.task.model.Status;
 import org.kie.demo.taskassignment.planner.StartTimeUpdatingVariableListener;
+import org.kie.demo.taskassignment.planner.TaskDifficultyComparator;
 import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.variable.AnchorShadowVariable;
 import org.optaplanner.core.api.domain.variable.CustomShadowVariable;
@@ -14,8 +16,9 @@ import org.optaplanner.core.api.domain.variable.PlanningVariable;
 import org.optaplanner.core.api.domain.variable.PlanningVariableGraphType;
 import org.optaplanner.core.api.domain.variable.PlanningVariableReference;
 
-@PlanningEntity/*(movableEntitySelectionFilter = MovableTaskSelectionFilter.class,
-        difficultyComparatorClass = TaskDifficultyComparator.class)*/
+@PlanningEntity(/*movableEntitySelectionFilter = MovableTaskSelectionFilter.class,*/
+        difficultyComparatorClass = TaskDifficultyComparator.class)
+@XStreamAlias("TaskPlanningEntity")
 public class TaskPlanningEntity extends TaskOrUser{
 
     // id from the engine
@@ -240,6 +243,10 @@ public class TaskPlanningEntity extends TaskOrUser{
             return null;
         }
 
+        return startTime + getRealDuration();
+    }
+
+    public int getRealDuration() {
         // By default, if there is no user, the task is initialized with skillLevel NONE(4)
         SkillLevel skillLevel = SkillLevel.NONE;
         if (user != null) {
@@ -247,7 +254,8 @@ public class TaskPlanningEntity extends TaskOrUser{
         }
         // TODO Implement getDuration method which will compute real duration based on assigned user's level of skill for this task
         Integer realDuration = skillLevel.getDurationMultiplier() * baseDuration;
-        return startTime + realDuration;
+
+        return realDuration;
     }
 
 }
