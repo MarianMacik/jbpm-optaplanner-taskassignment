@@ -15,7 +15,7 @@ import org.junit.Test;
 import org.kie.demo.taskassignment.planner.domain.Group;
 import org.kie.demo.taskassignment.planner.domain.SkillLevel;
 import org.kie.demo.taskassignment.planner.domain.User;
-import org.kie.demo.taskassignment.planner.domain.UserServiceUtil;
+import org.kie.demo.taskassignment.util.UserServiceUtil;
 import org.kie.demo.taskassignment.test.util.AbstractCaseServicesBaseTest;
 
 public class UserServiceUtilTest extends AbstractCaseServicesBaseTest {
@@ -41,18 +41,21 @@ public class UserServiceUtilTest extends AbstractCaseServicesBaseTest {
     public void testGetAllUsers() {
         List<User> users = UserServiceUtil.getAllUsers();
 
-        List<User> filteredUsers = users.stream().filter(user -> user.getName().equals("marian")).collect(Collectors.toList());
+        // Assert that Administrator is not in the result
+        Assertions.assertThat(users).hasSize(3);
+
+        List<User> filteredUsers = users.stream().filter(user -> user.getName().equals("Marian")).collect(Collectors.toList());
         List<Group> groups = new ArrayList<>();
-        assertUser(filteredUsers, "marian", "management", SkillLevel.ADVANCED, "delivering", SkillLevel.ADVANCED, groups);
+        assertUser(filteredUsers, "Marian", "management", SkillLevel.ADVANCED, "delivering", SkillLevel.ADVANCED, groups);
 
-        filteredUsers = users.stream().filter(user -> user.getName().equals("john")).collect(Collectors.toList());
+        filteredUsers = users.stream().filter(user -> user.getName().equals("John")).collect(Collectors.toList());
         groups.add(new Group("managers"));
-        assertUser(filteredUsers, "john", "management", SkillLevel.BEGINNER, "delivering", SkillLevel.EXPERT, groups);
+        assertUser(filteredUsers, "John", "management", SkillLevel.BEGINNER, "delivering", SkillLevel.EXPERT, groups);
 
-        filteredUsers = users.stream().filter(user -> user.getName().equals("mary")).collect(Collectors.toList());
+        filteredUsers = users.stream().filter(user -> user.getName().equals("Mary")).collect(Collectors.toList());
         groups.clear();
         groups.add(new Group("suppliers"));
-        assertUser(filteredUsers, "mary", "management", SkillLevel.EXPERT, "delivering", SkillLevel.BEGINNER, groups);
+        assertUser(filteredUsers, "Mary", "management", SkillLevel.EXPERT, "delivering", SkillLevel.BEGINNER, groups);
 
     }
 

@@ -101,9 +101,9 @@ public class PushTaskEventListenerTest extends AbstractCaseServicesBaseTest {
         // let's assign users to roles so they can be participants in the case
 
         Map<String, OrganizationalEntity> roleAssignments = new HashMap<>();
-        roleAssignments.put("manager", new UserImpl("john"));
-        roleAssignments.put("supplier", new UserImpl("marian"));
-        roleAssignments.put("SUPP", new GroupImpl("suppliers"));
+        roleAssignments.put("manager", new UserImpl("John"));
+        roleAssignments.put("supplier", new UserImpl("Marian"));
+        roleAssignments.put("suppliers", new GroupImpl("suppliers"));
 
 
         // start new instance of a case with data and role assignment
@@ -115,12 +115,12 @@ public class PushTaskEventListenerTest extends AbstractCaseServicesBaseTest {
 
         Assertions.assertThat(tasks).hasSize(2); // both tasks should be pushed
 
-        // john
-        List<TaskSummary> assignedTasks = runtimeDataService.getTasksAssignedAsPotentialOwner("john", new QueryFilter());
+        // John
+        List<TaskSummary> assignedTasks = runtimeDataService.getTasksAssignedAsPotentialOwner("John", new QueryFilter());
         Assertions.assertThat(assignedTasks).hasSize(1);
         TaskSummary engineTask = assignedTasks.get(0);
 
-        List<TaskPlanningEntity> filteredTasks = tasks.stream().filter(taskPlanningEntity ->  taskPlanningEntity.getPotentialUserOwners().contains("john")).collect(Collectors.toList());
+        List<TaskPlanningEntity> filteredTasks = tasks.stream().filter(taskPlanningEntity ->  taskPlanningEntity.getPotentialUserOwners().contains("John")).collect(Collectors.toList());
         Assertions.assertThat(filteredTasks).hasSize(1);
         TaskPlanningEntity filteredTask = filteredTasks.get(0);
 
@@ -135,23 +135,23 @@ public class PushTaskEventListenerTest extends AbstractCaseServicesBaseTest {
 
 
         // we will start john's task to check if it gets updated in our memory
-        userTaskService.start(filteredTask.getId(), "john");
+        userTaskService.start(filteredTask.getId(), "John");
         // still size 2, but now john's task should be InProgress
         Assertions.assertThat(tasks).hasSize(2);
         // find updated task with the same ID
         Assertions.assertThat(tasks.get(tasks.indexOf(filteredTask)).getStatus()).isEqualTo(Status.InProgress);
 
-        userTaskService.complete(filteredTask.getId(), "john", new HashMap<>());
+        userTaskService.complete(filteredTask.getId(), "John", new HashMap<>());
         Assertions.assertThat(tasks).hasSize(1);
         Assertions.assertThat(tasks.contains(filteredTask)).isFalse();
 
-        // marian
-        assignedTasks = runtimeDataService.getTasksAssignedAsPotentialOwner("marian", new QueryFilter());
+        // Marian
+        assignedTasks = runtimeDataService.getTasksAssignedAsPotentialOwner("Marian", new QueryFilter());
         Assertions.assertThat(assignedTasks).hasSize(1);
 
         engineTask = assignedTasks.get(0);
 
-        filteredTasks = tasks.stream().filter(taskPlanningEntity ->  taskPlanningEntity.getPotentialUserOwners().contains("marian")).collect(Collectors.toList());
+        filteredTasks = tasks.stream().filter(taskPlanningEntity ->  taskPlanningEntity.getPotentialUserOwners().contains("Marian")).collect(Collectors.toList());
         Assertions.assertThat(filteredTasks).hasSize(1);
         filteredTask = filteredTasks.get(0);
 
@@ -163,7 +163,7 @@ public class PushTaskEventListenerTest extends AbstractCaseServicesBaseTest {
         Assertions.assertThat(filteredTask.getStatus()).isEqualTo(engineTask.getStatus());
         Assertions.assertThat(filteredTask.getPriority()).isEqualTo(Priority.MEDIUM);
         Assertions.assertThat(filteredTask.getSkill()).isEqualTo("delivering");
-        // this task should be for suppliers group too, e.g. mary is a member of this group
+        // this task should be for suppliers group too, e.g. Mary is a member of this group
         Assertions.assertThat(filteredTask.getPotentialGroupOwners().iterator().next().getName()).isEqualTo("suppliers");
 
 
@@ -207,9 +207,9 @@ public class PushTaskEventListenerTest extends AbstractCaseServicesBaseTest {
         Assertions.assertThat(tasks).hasSize(0);
 
         // there should not be any active tasks in the engine either
-        assignedTasks = runtimeDataService.getTasksAssignedAsPotentialOwner("john", new QueryFilter());
+        assignedTasks = runtimeDataService.getTasksAssignedAsPotentialOwner("John", new QueryFilter());
         Assertions.assertThat(assignedTasks).hasSize(0);
-        assignedTasks = runtimeDataService.getTasksAssignedAsPotentialOwner("marian", new QueryFilter());
+        assignedTasks = runtimeDataService.getTasksAssignedAsPotentialOwner("Marian", new QueryFilter());
         Assertions.assertThat(assignedTasks).hasSize(0);
 
     }

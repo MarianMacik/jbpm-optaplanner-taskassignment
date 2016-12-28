@@ -79,7 +79,8 @@ public class PushTaskEventListener extends DefaultTaskEventListener {
         TaskPlanningEntity taskPlanningEntity = new TaskPlanningEntity();
 
         taskPlanningEntity.setId(engineTask.getId());
-        taskPlanningEntity.setName(engineTask.getName());
+        // engineTask.getName() cannot be used as this returns the node name and then we cannot use a signal to a custom-named node, e.g. #{caseFile_TaskName}
+        taskPlanningEntity.setName(engineTask.getTaskData().getTaskInputVariables().get("TaskName").toString());
 
         User actualOwner = engineTask.getTaskData().getActualOwner();
         taskPlanningEntity.setActualOwner( actualOwner != null ? actualOwner.getId() : null);
@@ -94,7 +95,7 @@ public class PushTaskEventListener extends DefaultTaskEventListener {
         });
 
         // setBaseDuration
-        taskPlanningEntity.setBaseDuration(Integer.parseInt((String) engineTask.getTaskData().getTaskInputVariables().get("BaseDuration")));
+        taskPlanningEntity.setBaseDuration(Integer.parseInt(String.valueOf(engineTask.getTaskData().getTaskInputVariables().get("BaseDuration"))));
         // set the current status of the task
         taskPlanningEntity.setStatus(engineTask.getTaskData().getStatus());
         taskPlanningEntity.setPriority(mapPriority(engineTask.getPriority()));

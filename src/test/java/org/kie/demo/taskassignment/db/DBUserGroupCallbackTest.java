@@ -63,8 +63,6 @@ public class DBUserGroupCallbackTest extends AbstractCaseServicesBaseTest {
             marian.addUserGroup(marianItGroup);
             it.addUserGroup(marianItGroup);
 
-
-
             UserTransaction utx = (UserTransaction) new InitialContext().lookup("java:comp/UserTransaction");
 
             utx.begin();

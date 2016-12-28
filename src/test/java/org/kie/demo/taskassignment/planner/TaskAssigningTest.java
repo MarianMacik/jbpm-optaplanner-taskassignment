@@ -26,7 +26,7 @@ import org.kie.api.task.model.TaskSummary;
 import org.kie.demo.taskassignment.planner.domain.TaskAssigningSolution;
 import org.kie.demo.taskassignment.planner.domain.TaskPlanningEntity;
 import org.kie.demo.taskassignment.planner.domain.User;
-import org.kie.demo.taskassignment.planner.domain.UserServiceUtil;
+import org.kie.demo.taskassignment.util.UserServiceUtil;
 import org.kie.demo.taskassignment.test.util.AbstractCaseServicesBaseTest;
 import org.kie.internal.query.QueryFilter;
 import org.kie.internal.runtime.conf.ObjectModel;
@@ -123,7 +123,7 @@ public class TaskAssigningTest extends AbstractCaseServicesBaseTest {
             activeCaseIds.add(caseId);
         }
 
-        List<TaskSummary> tasks = runtimeDataService.getTasksAssignedAsPotentialOwner("marian", new QueryFilter());
+        List<TaskSummary> tasks = runtimeDataService.getTasksAssignedAsPotentialOwner("Marian", new QueryFilter());
 
         // Marian will claim a few tasks, so these tasks can only be assigned to him
 //        for (int i = 0; i < 6; i++) {
@@ -178,9 +178,9 @@ public class TaskAssigningTest extends AbstractCaseServicesBaseTest {
         // let's assign users to roles so they can be participants in the case
 
         Map<String, OrganizationalEntity> roleAssignments = new HashMap<>();
-        roleAssignments.put("manager", new UserImpl("john"));
-        roleAssignments.put("supplier", new UserImpl("marian"));
-        roleAssignments.put("SUPP", new GroupImpl("suppliers"));
+        roleAssignments.put("manager", new UserImpl("John"));
+        roleAssignments.put("supplier", new UserImpl("Marian"));
+        roleAssignments.put("suppliers", new GroupImpl("suppliers"));
 
 
         // start new instance of a case with data and role assignment

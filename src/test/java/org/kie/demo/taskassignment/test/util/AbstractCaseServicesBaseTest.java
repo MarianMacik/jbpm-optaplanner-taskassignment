@@ -92,6 +92,8 @@ import org.kie.demo.taskassignment.db.UserEntity;
 import org.kie.demo.taskassignment.db.UserGroupEntity;
 import org.kie.demo.taskassignment.db.UserSkillEntity;
 import org.kie.demo.taskassignment.planner.domain.SkillLevel;
+import org.kie.demo.taskassignment.util.TestIdentityProvider;
+import org.kie.demo.taskassignment.util.UserJSONParser;
 import org.kie.internal.io.ResourceFactory;
 import org.kie.internal.runtime.conf.DeploymentDescriptor;
 import org.kie.internal.runtime.conf.DeploymentDescriptorBuilder;
@@ -223,72 +225,77 @@ public abstract class AbstractCaseServicesBaseTest {
     }
 
     protected void insertUsersAndGroupsToDB() {
-        EntityManager em = emf.createEntityManager();
+        UserJSONParser parser = new UserJSONParser(emf);
+        File file = new File("src/main/resources/org/kie/demo/taskassignment/db/testUsers.json");
 
-        UserEntity mary = new UserEntity("mary");
-        UserEntity john = new UserEntity("john");
-        UserEntity marian = new UserEntity("marian");
-        UserEntity admin = new UserEntity("Administrator");
+        parser.insertUsersFromFile(file);
 
-
-        GroupEntity suppliers = new GroupEntity("suppliers");
-        GroupEntity managers = new GroupEntity("managers");
-
-        // mapping of users and groups
-        UserGroupEntity marySuppliers = new UserGroupEntity(mary, suppliers);
-        UserGroupEntity johnManagers = new UserGroupEntity(john, managers);
-
-        // marian does not belong to any group
-
-        SkillEntity management = new SkillEntity("management");
-        SkillEntity delivering = new SkillEntity("delivering");
-
-        // mapping of users and skills
-        UserSkillEntity managementMary = new UserSkillEntity(mary, management, SkillLevel.EXPERT);
-        UserSkillEntity deliveringMary = new UserSkillEntity(mary, delivering, SkillLevel.BEGINNER);
-
-        UserSkillEntity managementJohn = new UserSkillEntity(john, management, SkillLevel.BEGINNER);
-        UserSkillEntity deliveringJohn = new UserSkillEntity(john, delivering, SkillLevel.EXPERT);
-
-        UserSkillEntity managementMarian = new UserSkillEntity(marian, management, SkillLevel.ADVANCED);
-        UserSkillEntity deliveringmarian = new UserSkillEntity(marian, delivering, SkillLevel.ADVANCED);
-
-
-
-        try {
-            UserTransaction utx = (UserTransaction) new InitialContext().lookup("java:comp/UserTransaction");
-            utx.begin();
-            em.joinTransaction();
-
-            em.persist(john);
-            em.persist(mary);
-            em.persist(admin);
-            em.persist(marian);
-
-            em.persist(suppliers);
-            em.persist(managers);
-
-            em.persist(marySuppliers);
-            em.persist(johnManagers);
-
-            em.persist(management);
-            em.persist(delivering);
-
-            em.persist(managementMary);
-            em.persist(deliveringMary);
-            em.persist(managementJohn);
-            em.persist(deliveringJohn);
-            em.persist(managementMarian);
-            em.persist(deliveringmarian);
-
-            utx.commit();
-        } catch (Exception e) {
-            throw new RuntimeException("Problem with DB", e);
-        } finally {
-            if (em.isOpen()) {
-                em.close();
-            }
-        }
+//        EntityManager em = emf.createEntityManager();
+//
+//        UserEntity mary = new UserEntity("mary");
+//        UserEntity john = new UserEntity("john");
+//        UserEntity marian = new UserEntity("marian");
+//        UserEntity admin = new UserEntity("Administrator");
+//
+//
+//        GroupEntity suppliers = new GroupEntity("suppliers");
+//        GroupEntity managers = new GroupEntity("managers");
+//
+//        // mapping of users and groups
+//        UserGroupEntity marySuppliers = new UserGroupEntity(mary, suppliers);
+//        UserGroupEntity johnManagers = new UserGroupEntity(john, managers);
+//
+//        // marian does not belong to any group
+//
+//        SkillEntity management = new SkillEntity("management");
+//        SkillEntity delivering = new SkillEntity("delivering");
+//
+//        // mapping of users and skills
+//        UserSkillEntity managementMary = new UserSkillEntity(mary, management, SkillLevel.EXPERT);
+//        UserSkillEntity deliveringMary = new UserSkillEntity(mary, delivering, SkillLevel.BEGINNER);
+//
+//        UserSkillEntity managementJohn = new UserSkillEntity(john, management, SkillLevel.BEGINNER);
+//        UserSkillEntity deliveringJohn = new UserSkillEntity(john, delivering, SkillLevel.EXPERT);
+//
+//        UserSkillEntity managementMarian = new UserSkillEntity(marian, management, SkillLevel.ADVANCED);
+//        UserSkillEntity deliveringmarian = new UserSkillEntity(marian, delivering, SkillLevel.ADVANCED);
+//
+//
+//
+//        try {
+//            UserTransaction utx = (UserTransaction) new InitialContext().lookup("java:comp/UserTransaction");
+//            utx.begin();
+//            em.joinTransaction();
+//
+//            em.persist(john);
+//            em.persist(mary);
+//            em.persist(admin);
+//            em.persist(marian);
+//
+//            em.persist(suppliers);
+//            em.persist(managers);
+//
+//            em.persist(marySuppliers);
+//            em.persist(johnManagers);
+//
+//            em.persist(management);
+//            em.persist(delivering);
+//
+//            em.persist(managementMary);
+//            em.persist(deliveringMary);
+//            em.persist(managementJohn);
+//            em.persist(deliveringJohn);
+//            em.persist(managementMarian);
+//            em.persist(deliveringmarian);
+//
+//            utx.commit();
+//        } catch (Exception e) {
+//            throw new RuntimeException("Problem with DB", e);
+//        } finally {
+//            if (em.isOpen()) {
+//                em.close();
+//            }
+//        }
     }
 
     protected String getPom(ReleaseId releaseId, ReleaseId... dependencies) {
