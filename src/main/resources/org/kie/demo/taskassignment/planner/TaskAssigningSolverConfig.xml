@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver>
+  <environmentMode>FULL_ASSERT</environmentMode>
+  <!--<environmentMode>REPRODUCIBLE</environmentMode>-->
+
+  <solutionClass>org.kie.demo.taskassignment.planner.domain.TaskAssigningSolution</solutionClass>
+  <entityClass>org.kie.demo.taskassignment.planner.domain.TaskOrUser</entityClass>
+  <entityClass>org.kie.demo.taskassignment.planner.domain.TaskPlanningEntity</entityClass>
+
+  <scoreDirectorFactory>
+    <scoreDrl>org/kie/demo/taskassignment/planner/TaskAssigningScoreRules.drl</scoreDrl>
+  </scoreDirectorFactory>
+
+  <!--<constructionHeuristic>-->
+    <!--<constructionHeuristicType>FIRST_FIT_DECREASING</constructionHeuristicType>-->
+  <!--</constructionHeuristic>-->
+<!--<localSearch>-->
+  <!--&lt;!&ndash;LATE ACCEPTANCE&ndash;&gt;-->
+  <!--<acceptor>-->
+  <!--<lateAcceptanceSize>400</lateAcceptanceSize>-->
+  <!--</acceptor>-->
+  <!--&lt;!&ndash;<forager>&ndash;&gt;-->
+  <!--&lt;!&ndash;<acceptedCountLimit>1</acceptedCountLimit>&ndash;&gt;-->
+  <!--&lt;!&ndash;</forager>&ndash;&gt;-->
+  <!--&lt;!&ndash;<termination>&ndash;&gt;-->
+  <!--&lt;!&ndash;<stepCountLimit>1000</stepCountLimit>&ndash;&gt;-->
+  <!--&lt;!&ndash;</termination>&ndash;&gt;-->
+  <!---->
+  <!---->
+<!--</localSearch>-->
+
+  <termination>
+    <!--<secondsSpentLimit>8</secondsSpentLimit>-->
+  </termination>
+
+
+    <constructionHeuristic/>
+    <localSearch>
+      <localSearchType>HILL_CLIMBING</localSearchType>
+    </localSearch>
+</solver>
