@@ -13,10 +13,7 @@ import org.jbpm.services.task.identity.DBUserGroupCallbackImpl;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.kie.demo.taskassignment.db.GroupEntity;
-import org.kie.demo.taskassignment.db.UserEntity;
-import org.kie.demo.taskassignment.db.UserGroupEntity;
-import org.kie.demo.taskassignment.test.util.AbstractCaseServicesBaseTest;
+import org.kie.demo.taskassignment.util.AbstractCaseServicesBaseTest;
 
 public class DBUserGroupCallbackTest extends AbstractCaseServicesBaseTest {
 

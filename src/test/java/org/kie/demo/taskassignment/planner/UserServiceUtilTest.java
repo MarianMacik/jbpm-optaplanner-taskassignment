@@ -1,7 +1,5 @@
 package org.kie.demo.taskassignment.planner;
 
-import static org.kie.scanner.MavenRepository.getMavenRepository;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -15,8 +13,8 @@ import org.junit.Test;
 import org.kie.demo.taskassignment.planner.domain.Group;
 import org.kie.demo.taskassignment.planner.domain.SkillLevel;
 import org.kie.demo.taskassignment.planner.domain.User;
+import org.kie.demo.taskassignment.util.AbstractCaseServicesBaseTest;
 import org.kie.demo.taskassignment.util.UserServiceUtil;
-import org.kie.demo.taskassignment.test.util.AbstractCaseServicesBaseTest;
 
 public class UserServiceUtilTest extends AbstractCaseServicesBaseTest {
 

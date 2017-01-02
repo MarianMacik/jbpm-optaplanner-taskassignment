@@ -1,7 +1,5 @@
 package org.kie.demo.taskassignment.benchmark;
 
-import java.io.File;
-
 import org.junit.Test;
 import org.optaplanner.benchmark.api.PlannerBenchmark;
 import org.optaplanner.benchmark.api.PlannerBenchmarkFactory;
