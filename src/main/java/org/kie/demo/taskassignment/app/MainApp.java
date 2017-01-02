@@ -28,12 +28,11 @@ import org.kie.demo.taskassignment.app.view.UserDialogController;
 import org.kie.demo.taskassignment.planner.domain.TaskAssigningSolution;
 import org.kie.demo.taskassignment.planner.domain.TaskPlanningEntity;
 import org.kie.demo.taskassignment.planner.domain.User;
-import org.optaplanner.core.api.score.Score;
 
 public class MainApp extends Application {
 
     private Stage primaryStage;
-    private SplitPane myRootLayout;
+    private SplitPane rootLayout;
     private BorderPane caseOverview;
 
 
@@ -79,13 +78,13 @@ public class MainApp extends Application {
             // Load root layout from fxml file.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class
-                    .getResource("view/MyRootLayout.fxml"));
-            myRootLayout = (SplitPane) loader.load();
+                    .getResource("view/RootLayout.fxml"));
+            rootLayout = (SplitPane) loader.load();
             solutionController = loader.getController();
             solutionController.setMainApp(this);
 
             // Show the scene containing the root layout.
-            Scene scene = new Scene(myRootLayout);
+            Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
 
             primaryStage.show();
@@ -106,7 +105,7 @@ public class MainApp extends Application {
         sp.setContent(taskAnchorPane);
         sp.setFitToHeight(true);
         sp.setFitToWidth(true);
-        ((BorderPane)myRootLayout.getItems().get(0)).setCenter(sp);
+        ((BorderPane) rootLayout.getItems().get(0)).setCenter(sp);
 
     }
 
@@ -118,7 +117,7 @@ public class MainApp extends Application {
             caseController = loader.getController();
             caseController.setMainApp(this);
             caseController.setServices(services);
-            myRootLayout.getItems().add(0, caseOverview);
+            rootLayout.getItems().add(0, caseOverview);
         } catch (IOException e) {
             e.printStackTrace();
         }
