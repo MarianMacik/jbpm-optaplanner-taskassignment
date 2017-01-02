@@ -31,7 +31,7 @@ rule "High priority"
         scoreHolder.addSoftConstraintMatch(kcontext, 0, - $endTime);
 end
 
-rule "Minimze makespan (starting with the latest ending employee first)"
+rule "Minimize makespan"
     when
         TaskPlanningEntity(user != null, nextTask == null, $endTime : endTime)
     then
