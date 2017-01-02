@@ -1,2 +1,2 @@
 # jbpm-optaplanner-taskassignment
-jBPM Task Assignment using Optaplanner
+Case Management Task Assignment Using Optaplanner
