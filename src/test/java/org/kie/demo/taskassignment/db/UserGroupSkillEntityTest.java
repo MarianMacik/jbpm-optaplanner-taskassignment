@@ -11,15 +11,14 @@ import org.assertj.core.api.Assertions;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.kie.demo.taskassignment.db.GroupEntity;
-import org.kie.demo.taskassignment.db.SkillEntity;
-import org.kie.demo.taskassignment.db.UserEntity;
-import org.kie.demo.taskassignment.db.UserGroupEntity;
-import org.kie.demo.taskassignment.db.UserSkillEntity;
 import org.kie.demo.taskassignment.planner.domain.SkillLevel;
-import org.kie.demo.taskassignment.test.util.AbstractCaseServicesBaseTest;
+import org.kie.demo.taskassignment.util.AbstractCaseServicesBaseTest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class UserGroupSkillEntityTest extends AbstractCaseServicesBaseTest {
+
+    private static final Logger logger = LoggerFactory.getLogger(UserGroupSkillEntityTest.class);
 
     private EntityManager em;
 
@@ -55,7 +54,7 @@ public class UserGroupSkillEntityTest extends AbstractCaseServicesBaseTest {
 
         List<UserEntity> users = em.createQuery("SELECT u from UserEntity u", UserEntity.class).getResultList();
 
-        users.forEach(userEntity -> System.out.println(userEntity.getName()));
+        users.forEach(userEntity -> logger.debug(userEntity.getName()));
 
         Assertions.assertThat(users).hasSize(1);
         Assertions.assertThat(users.get(0)).isEqualTo(marian);
@@ -77,7 +76,7 @@ public class UserGroupSkillEntityTest extends AbstractCaseServicesBaseTest {
 
         List<GroupEntity> groups = em.createQuery("SELECT g from GroupEntity g", GroupEntity.class).getResultList();
 
-        groups.forEach(groupEntity -> System.out.println(groupEntity.getName()));
+        groups.forEach(groupEntity -> logger.debug(groupEntity.getName()));
 
         Assertions.assertThat(groups).hasSize(1);
         Assertions.assertThat(groups.get(0)).isEqualTo(hr);
@@ -99,7 +98,7 @@ public class UserGroupSkillEntityTest extends AbstractCaseServicesBaseTest {
 
         List<SkillEntity> roles = em.createQuery("SELECT r from SkillEntity r", SkillEntity.class).getResultList();
 
-        roles.forEach(skillEntity -> System.out.println(skillEntity.getName()));
+        roles.forEach(skillEntity -> logger.debug(skillEntity.getName()));
 
         Assertions.assertThat(roles).hasSize(1);
         Assertions.assertThat(roles.get(0)).isEqualTo(manager);
@@ -126,7 +125,7 @@ public class UserGroupSkillEntityTest extends AbstractCaseServicesBaseTest {
         em.persist(marian);
         em.persist(marianHrGroup);
 
-        System.out.println("Groups: " + marian.getUserGroups());
+        logger.debug("Groups: " + marian.getUserGroups());
         utx.commit();
 
         em.clear();
@@ -135,21 +134,21 @@ public class UserGroupSkillEntityTest extends AbstractCaseServicesBaseTest {
 
         List<UserEntity> users = em.createQuery("SELECT u from UserEntity u", UserEntity.class).getResultList();
 
-        users.forEach(userEntity -> System.out.println("Users: " + userEntity.getName() + userEntity.getId() + userEntity.getUserGroups()));
+        users.forEach(userEntity -> logger.debug("Users: " + userEntity.getName() + userEntity.getId() + userEntity.getUserGroups()));
 
         Assertions.assertThat(users).hasSize(1);
         Assertions.assertThat(users.get(0)).isEqualTo(marian);
 
         List<GroupEntity> groups = em.createQuery("SELECT g from GroupEntity g", GroupEntity.class).getResultList();
 
-        groups.forEach(groupEntity -> System.out.println("Groups: " + groupEntity.getName() + groupEntity.getId() + groupEntity.getUserGroups()));
+        groups.forEach(groupEntity -> logger.debug("Groups: " + groupEntity.getName() + groupEntity.getId() + groupEntity.getUserGroups()));
 
         Assertions.assertThat(groups).hasSize(1);
         Assertions.assertThat(groups.get(0)).isEqualTo(hr);
 
         List<UserGroupEntity> userGroups = em.createQuery("SELECT u from UserGroupEntity u", UserGroupEntity.class).getResultList();
 
-        userGroups.forEach(userGroupEntity -> System.out.println("UserGroups: " + userGroupEntity + userGroupEntity.getUser().getId() + userGroupEntity.getGroup().getId()));
+        userGroups.forEach(userGroupEntity -> logger.debug("UserGroups: " + userGroupEntity + userGroupEntity.getUser().getId() + userGroupEntity.getGroup().getId()));
 
         Assertions.assertThat(userGroups).hasSize(1);
         Assertions.assertThat(userGroups.get(0)).isEqualTo(marianHrGroup);
@@ -177,7 +176,7 @@ public class UserGroupSkillEntityTest extends AbstractCaseServicesBaseTest {
         em.persist(marian);
         em.persist(marianManagerRole);
 
-        System.out.println("Roles: " + marian.getUserSkills());
+        logger.debug("Roles: " + marian.getUserSkills());
         utx.commit();
 
         em.clear();
@@ -186,21 +185,21 @@ public class UserGroupSkillEntityTest extends AbstractCaseServicesBaseTest {
 
         List<UserEntity> users = em.createQuery("SELECT u from UserEntity u", UserEntity.class).getResultList();
 
-        users.forEach(userEntity -> System.out.println("Users: " + userEntity.getName() + userEntity.getId() + userEntity.getUserSkills()));
+        users.forEach(userEntity -> logger.debug("Users: " + userEntity.getName() + userEntity.getId() + userEntity.getUserSkills()));
 
         Assertions.assertThat(users).hasSize(1);
         Assertions.assertThat(users.get(0)).isEqualTo(marian);
 
         List<SkillEntity> roles = em.createQuery("SELECT r from SkillEntity r", SkillEntity.class).getResultList();
 
-        roles.forEach(skillEntity -> System.out.println("Groups: " + skillEntity.getName() + skillEntity.getId() + skillEntity.getUserSkills()));
+        roles.forEach(skillEntity -> logger.debug("Groups: " + skillEntity.getName() + skillEntity.getId() + skillEntity.getUserSkills()));
 
         Assertions.assertThat(roles).hasSize(1);
         Assertions.assertThat(roles.get(0)).isEqualTo(manager);
 
         List<UserSkillEntity> userRoles = em.createQuery("SELECT u from UserSkillEntity u", UserSkillEntity.class).getResultList();
 
-        userRoles.forEach(userSkillEntity -> System.out.println("UserGroups: " + userSkillEntity + userSkillEntity.getUser().getId() + userSkillEntity.getSkill().getId()));
+        userRoles.forEach(userSkillEntity -> logger.debug("UserGroups: " + userSkillEntity + userSkillEntity.getUser().getId() + userSkillEntity.getSkill().getId()));
 
         Assertions.assertThat(userRoles).hasSize(1);
         Assertions.assertThat(userRoles.get(0)).isEqualTo(marianManagerRole);

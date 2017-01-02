@@ -1,7 +1,5 @@
 package org.kie.demo.taskassignment.planner;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 import static org.kie.scanner.MavenRepository.getMavenRepository;
 
 import java.io.File;
@@ -29,7 +27,7 @@ import org.kie.api.task.model.Status;
 import org.kie.api.task.model.TaskSummary;
 import org.kie.demo.taskassignment.planner.domain.Priority;
 import org.kie.demo.taskassignment.planner.domain.TaskPlanningEntity;
-import org.kie.demo.taskassignment.test.util.AbstractCaseServicesBaseTest;
+import org.kie.demo.taskassignment.util.AbstractCaseServicesBaseTest;
 import org.kie.internal.query.QueryFilter;
 import org.kie.internal.runtime.conf.ObjectModel;
 import org.kie.scanner.MavenRepository;
@@ -39,9 +37,7 @@ import org.slf4j.LoggerFactory;
 public class PushTaskEventListenerTest extends AbstractCaseServicesBaseTest {
 
     private static final Logger logger = LoggerFactory.getLogger(PushTaskEventListenerTest.class);
-    private static final String TEST_DOC_STORAGE = "target/docs";
 
-    // Overridden from parent
     protected static final String GROUP_ID = "org.kie.demo";
     protected static final String ARTIFACT_ID = "taskassignment-cases";
     protected static final String VERSION = "1.0.0-SNAPSHOT";
@@ -56,8 +52,6 @@ public class PushTaskEventListenerTest extends AbstractCaseServicesBaseTest {
 
     @Before
     public void prepare() {
-        System.setProperty("org.jbpm.document.storage", TEST_DOC_STORAGE);
-        deleteFolder(TEST_DOC_STORAGE);
         configureServices();
         insertUsersAndGroupsToDB();
 
@@ -83,7 +77,6 @@ public class PushTaskEventListenerTest extends AbstractCaseServicesBaseTest {
 
     @After
     public void cleanup() {
-        System.clearProperty("org.jbpm.document.storage");
         cleanupSingletonSessionId();
         if (units != null && !units.isEmpty()) {
             for (DeploymentUnit unit : units) {
@@ -92,7 +85,6 @@ public class PushTaskEventListenerTest extends AbstractCaseServicesBaseTest {
             units.clear();
         }
         close();
-        // CountDownListenerFactory.clear(); No CountDownListenerFacotry in these tests
     }
 
     @Test
@@ -166,44 +158,10 @@ public class PushTaskEventListenerTest extends AbstractCaseServicesBaseTest {
         // this task should be for suppliers group too, e.g. Mary is a member of this group
         Assertions.assertThat(filteredTask.getPotentialGroupOwners().iterator().next().getName()).isEqualTo("suppliers");
 
+        if (caseId != null) {
+            caseService.cancelCase(caseId);
+        }
 
-//        try {
-//            // let's verify case is created
-//            assertCaseInstance(deploymentId, CAR_INS_CASE_ID);
-//            // let's look at what stages are active
-//            assertBuildClaimReportStage();
-//            // since the first task assigned to insured is with auto start it should be already active
-//            // the same task can be claimed by insuranceRepresentative in case claim is reported over phone
-//            long taskId = assertBuildClaimReportAvailableForBothRoles();
-//            // let's provide claim report with initial data
-//            // claim report should be stored in case file data
-//            provideAndAssertClaimReport(taskId);
-//            // now we have another task for insured to provide property damage report
-//            taskId = assertPropertyDamageReportAvailableForBothRoles();
-//            // let's provide the property damage report
-//            provideAndAssertPropertyDamageReport(taskId);
-//            // let's complete the stage by explicitly stating that claimReport is done
-//            caseService.addDataToCaseFile(CAR_INS_CASE_ID, "claimReportDone", true);
-//            // we should be in another stage - Claim assessment
-//            assertClaimAssesmentStage();
-//            // let's trigger claim offer calculation
-//            caseService.triggerAdHocFragment(CAR_INS_CASE_ID, "Calculate claim", null);
-//            // now we have another task for insured as claim was calculated
-//            // let's accept the calculated claim
-//            assertAndAcceptClaimOffer();
-//            // there should be no process instances for the case
-//            Collection<ProcessInstanceDesc> caseProcesInstances = caseRuntimeDataService.getProcessInstancesForCase(CAR_INS_CASE_ID, Arrays.asList(ProcessInstance.STATE_ACTIVE),  new QueryContext());
-//            assertEquals(0, caseProcesInstances.size());
-//            caseId = null;
-//
-//        } catch (Exception e) {
-//            logger.error("Unexpected error {}", e.getMessage(), e);
-//            fail("Unexpected exception " + e.getMessage());
-//        } finally {
-            if (caseId != null) {
-                caseService.cancelCase(caseId);
-            }
-        //}
         Assertions.assertThat(tasks).hasSize(0);
 
         // there should not be any active tasks in the engine either
@@ -213,8 +171,6 @@ public class PushTaskEventListenerTest extends AbstractCaseServicesBaseTest {
         Assertions.assertThat(assignedTasks).hasSize(0);
 
     }
-
-
 
 
     /*
@@ -235,7 +191,7 @@ public class PushTaskEventListenerTest extends AbstractCaseServicesBaseTest {
     protected List<ObjectModel> getTaskEventListeners() {
         List<ObjectModel> listeners = super.getTaskEventListeners();
 
-        listeners.add(new ObjectModel("mvel", "new org.kie.demo.taskassignment.test.util.PushTaskEventListener(org.kie.demo.taskassignment.planner.PushTaskEventListenerTest.tasks)"));
+        listeners.add(new ObjectModel("mvel", "new org.kie.demo.taskassignment.util.TestPushTaskEventListener(org.kie.demo.taskassignment.planner.PushTaskEventListenerTest.tasks)"));
 
         return listeners;
     }

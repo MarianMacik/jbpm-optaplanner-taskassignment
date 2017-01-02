@@ -3,7 +3,6 @@ package org.kie.demo.taskassignment.db;
 import java.io.File;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 import java.util.stream.Collectors;
 
 import javax.persistence.EntityManager;
@@ -14,7 +13,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.kie.demo.taskassignment.planner.domain.SkillLevel;
-import org.kie.demo.taskassignment.test.util.AbstractCaseServicesBaseTest;
+import org.kie.demo.taskassignment.util.AbstractCaseServicesBaseTest;
 import org.kie.demo.taskassignment.util.UserJSONParser;
 
 public class UserJSONParserTest extends AbstractCaseServicesBaseTest {
@@ -40,7 +39,7 @@ public class UserJSONParserTest extends AbstractCaseServicesBaseTest {
     @Test
     public void testUserJSONParser() {
         UserJSONParser parser = new UserJSONParser(emf);
-        File file = new File("src/main/resources/org/kie/demo/taskassignment/db/testUsers.json");
+        File file = new File("src/test/resources/org/kie/demo/taskassignment/db/testUsers.json");
 
         parser.insertUsersFromFile(file);
 

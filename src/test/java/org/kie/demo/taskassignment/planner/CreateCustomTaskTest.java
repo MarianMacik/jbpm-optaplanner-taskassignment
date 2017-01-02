@@ -28,7 +28,7 @@ import org.kie.demo.taskassignment.planner.domain.Group;
 import org.kie.demo.taskassignment.planner.domain.Priority;
 import org.kie.demo.taskassignment.planner.domain.TaskPlanningEntity;
 import org.kie.demo.taskassignment.planner.domain.User;
-import org.kie.demo.taskassignment.test.util.AbstractCaseServicesBaseTest;
+import org.kie.demo.taskassignment.util.AbstractCaseServicesBaseTest;
 import org.kie.demo.taskassignment.util.UserServiceUtil;
 import org.kie.internal.query.QueryFilter;
 import org.kie.internal.runtime.conf.ObjectModel;
@@ -39,20 +39,14 @@ import org.slf4j.LoggerFactory;
 public class CreateCustomTaskTest extends AbstractCaseServicesBaseTest {
 
     private static final Logger logger = LoggerFactory.getLogger(TaskAssigningTest.class);
-    private static final String TEST_DOC_STORAGE = "target/docs";
 
-    // Overridden from parent
     protected static final String GROUP_ID = "org.kie.demo";
     protected static final String ARTIFACT_ID = "taskassignment-cases";
     protected static final String VERSION = "1.0.0-SNAPSHOT";
 
     private List<DeploymentUnit> units = new ArrayList<DeploymentUnit>();
 
-    private List<String> activeCaseIds = new ArrayList<>();
-
     private static final String ONE_TASK_PROC_ID = "OptaplannerTasks.OneTask";
-
-    protected static final String OPTTASK_CASE_ID = "OPTTASK-0000000001";
 
     public static List<TaskPlanningEntity> tasks = new ArrayList<>();
 
@@ -60,8 +54,6 @@ public class CreateCustomTaskTest extends AbstractCaseServicesBaseTest {
 
     @Before
     public void prepare() {
-        System.setProperty("org.jbpm.document.storage", TEST_DOC_STORAGE);
-        deleteFolder(TEST_DOC_STORAGE);
         configureServices();
         insertUsersAndGroupsToDB();
 
@@ -74,7 +66,6 @@ public class CreateCustomTaskTest extends AbstractCaseServicesBaseTest {
         ReleaseId releaseId = ks.newReleaseId(GROUP_ID, ARTIFACT_ID, VERSION);
         List<String> processes = new ArrayList<String>();
         processes.add("org/kie/demo/taskassignment/planner/OneTask.bpmn2");
-
 
         InternalKieModule kJar1 = createKieJar(ks, releaseId, processes);
         File pom = new File("target/kmodule", "pom.xml");
@@ -92,8 +83,6 @@ public class CreateCustomTaskTest extends AbstractCaseServicesBaseTest {
 
     @After
     public void cleanup() {
-
-        System.clearProperty("org.jbpm.document.storage");
         cleanupSingletonSessionId();
         if (units != null && !units.isEmpty()) {
             for (DeploymentUnit unit : units) {
@@ -103,16 +92,11 @@ public class CreateCustomTaskTest extends AbstractCaseServicesBaseTest {
         }
         UserServiceUtil.setEmf(null);
         close();
-        // CountDownListenerFactory.clear(); No CountDownListenerFacotry in these tests
     }
 
     @Test
     public void testCustomTask() {
-
         String deploymentId = deployAndAssert();
-
-        // let's assign users to roles so they can be participants in the case
-
 
         // start new instance of a case with data and role assignment
         Map<String, Object> data = new HashMap<>();
@@ -183,7 +167,7 @@ public class CreateCustomTaskTest extends AbstractCaseServicesBaseTest {
     protected List<ObjectModel> getTaskEventListeners() {
         List<ObjectModel> listeners = super.getTaskEventListeners();
 
-        listeners.add(new ObjectModel("mvel", "new org.kie.demo.taskassignment.test.util.PushTaskEventListener(org.kie.demo.taskassignment.planner.CreateCustomTaskTest.tasks)"));
+        listeners.add(new ObjectModel("mvel", "new org.kie.demo.taskassignment.util.TestPushTaskEventListener(org.kie.demo.taskassignment.planner.CreateCustomTaskTest.tasks)"));
 
         return listeners;
     }

@@ -27,7 +27,7 @@ import org.kie.demo.taskassignment.planner.domain.TaskAssigningSolution;
 import org.kie.demo.taskassignment.planner.domain.TaskPlanningEntity;
 import org.kie.demo.taskassignment.planner.domain.User;
 import org.kie.demo.taskassignment.util.UserServiceUtil;
-import org.kie.demo.taskassignment.test.util.AbstractCaseServicesBaseTest;
+import org.kie.demo.taskassignment.util.AbstractCaseServicesBaseTest;
 import org.kie.internal.query.QueryFilter;
 import org.kie.internal.runtime.conf.ObjectModel;
 import org.kie.scanner.MavenRepository;
@@ -39,9 +39,7 @@ import org.slf4j.LoggerFactory;
 public class TaskAssigningTest extends AbstractCaseServicesBaseTest {
 
     private static final Logger logger = LoggerFactory.getLogger(TaskAssigningTest.class);
-    private static final String TEST_DOC_STORAGE = "target/docs";
 
-    // Overridden from parent
     protected static final String GROUP_ID = "org.kie.demo";
     protected static final String ARTIFACT_ID = "taskassignment-cases";
     protected static final String VERSION = "1.0.0-SNAPSHOT";
@@ -52,16 +50,12 @@ public class TaskAssigningTest extends AbstractCaseServicesBaseTest {
 
     private static final String TASKS_TO_ASSIGN_PROC_ID = "OptaplannerTasks.TasksToAssign";
 
-    protected static final String OPTTASK_CASE_ID = "OPTTASK-0000000001";
-
     public static List<TaskPlanningEntity> tasks = new ArrayList<>();
 
     private List<User> users;
 
     @Before
     public void prepare() {
-        System.setProperty("org.jbpm.document.storage", TEST_DOC_STORAGE);
-        deleteFolder(TEST_DOC_STORAGE);
         configureServices();
         insertUsersAndGroupsToDB();
 
@@ -103,12 +97,11 @@ public class TaskAssigningTest extends AbstractCaseServicesBaseTest {
         }
         UserServiceUtil.setEmf(null);
         close();
-        // CountDownListenerFactory.clear(); No CountDownListenerFacotry in these tests
     }
 
     @Test
     public void testTaskAssigning(){
-        SolverFactory<TaskAssigningSolution> solverFactory = SolverFactory.createFromXmlResource("org/kie/demo/taskassignment/planner/TaskAssigningSolverConfig.xml");
+        SolverFactory<TaskAssigningSolution> solverFactory = SolverFactory.createFromXmlResource("org/kie/demo/taskassignment/planner/TaskAssigningSolverTestConfig.xml");
         Solver<TaskAssigningSolution> solver = solverFactory.buildSolver();
 
         TaskAssigningSolution solution = new TaskAssigningSolution();
@@ -125,39 +118,23 @@ public class TaskAssigningTest extends AbstractCaseServicesBaseTest {
 
         List<TaskSummary> tasks = runtimeDataService.getTasksAssignedAsPotentialOwner("Marian", new QueryFilter());
 
-        // Marian will claim a few tasks, so these tasks can only be assigned to him
-//        for (int i = 0; i < 6; i++) {
-//            userTaskService.claim(tasks.get(i).getId(), "marian");
-//            System.out.println("Marian claimed taskId " + tasks.get(i).getId());
-//        }
-
         TaskAssigningSolution solvedSolution = solver.solve(solution);
 
 
         // print planned tasks for each user and try to claim, start and complete them in the engine,
         // if this proceeds without an exception, the test is successful
         solvedSolution.getUserList().forEach(user -> {
-            System.out.println("Tasks for user " + user.getName() + " :");
+            logger.debug("Tasks for user " + user.getName() + " :");
             TaskPlanningEntity actualTask = user.getNextTask();
             while (actualTask != null) {
-                System.out.println(actualTask.getName() + " " + actualTask.getId() + " - startTime: " + actualTask.getStartTime() + " + duration: "
+                logger.debug(actualTask.getName() + " " + actualTask.getId() + " - startTime: " + actualTask.getStartTime() + " + duration: "
                         + actualTask.getBaseDuration() + " x " + actualTask.getUser().getSkills().get(actualTask.getSkill()).getSkillLevel().getDurationMultiplier() + " = endTime: " + actualTask.getEndTime());
                 userTaskService.completeAutoProgress(actualTask.getId(), user.getName(), new HashMap<>());
                 actualTask = actualTask.getNextTask();
             }
         });
 
-
-
-
         activeCaseIds.forEach(caseId -> caseService.cancelCase(caseId));
-
-
-//        if (caseId != null) {
-//            caseService.cancelCase(caseId);
-//        }
-
-
     }
 
     /*
@@ -195,7 +172,7 @@ public class TaskAssigningTest extends AbstractCaseServicesBaseTest {
     protected List<ObjectModel> getTaskEventListeners() {
         List<ObjectModel> listeners = super.getTaskEventListeners();
 
-        listeners.add(new ObjectModel("mvel", "new org.kie.demo.taskassignment.test.util.PushTaskEventListener(org.kie.demo.taskassignment.planner.TaskAssigningTest.tasks)"));
+        listeners.add(new ObjectModel("mvel", "new org.kie.demo.taskassignment.util.TestPushTaskEventListener(org.kie.demo.taskassignment.planner.TaskAssigningTest.tasks)"));
 
         return listeners;
     }
