@@ -132,11 +132,6 @@ public class TaskAnchorPane extends AnchorPane {
             taskButton.setGraphic(new ImageView("file:src/main/resources/images/LockerIcon_16x16.png"));
             taskButton.setContentDisplay(ContentDisplay.TOP);
         }
-        //taskButton.setBackground(new Background());
-        //taskButton.setStyle("-fx-base: aliceblue");
-        //TextAlignment alignment = new TextAlignment()
-        //taskButton.setTextAlignment();
-        //taskButton.setVerticalTextPosition(SwingConstants.TOP);
         taskButton.setPrefWidth(task.getRealDuration());
         taskButton.setMaxWidth(task.getRealDuration());
         taskButton.setPrefHeight(ROW_HEIGHT);

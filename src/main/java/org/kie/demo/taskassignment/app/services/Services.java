@@ -218,7 +218,7 @@ public class Services {
     }
 
     public void insertSmallScenarioUsers() {
-        File file = new File("src/main/resources/org/kie/demo/taskassignment/db/usersToTest.json");
+        File file = new File("src/main/resources/org/kie/demo/taskassignment/db/users.json");
 
         userJSONParser.insertUsersFromFile(file);
     }
@@ -359,7 +359,7 @@ public class Services {
         kfs.writePomXML(getPom(releaseId));
         // set the deployment descriptor so we use per case runtime strategy
         DeploymentDescriptor customDescriptor = new DeploymentDescriptorImpl("org.jbpm.domain");
-        DeploymentDescriptorBuilder ddBuilder = customDescriptor.getBuilder().runtimeStrategy(RuntimeStrategy.PER_CASE).addMarshalingStrategy(new ObjectModel("mvel", CaseMarshallerFactory.builder().withDoc().toString()))/*.addEventListener(new ObjectModel("mvel", "new org.kie.demo.taskassignment.test.util.TrackingCaseEventListener()"))*/;
+        DeploymentDescriptorBuilder ddBuilder = customDescriptor.getBuilder().runtimeStrategy(RuntimeStrategy.PER_CASE).addMarshalingStrategy(new ObjectModel("mvel", CaseMarshallerFactory.builder().withDoc().toString()));
 
         for (ObjectModel listener : getProcessListeners()) {
             ddBuilder.addEventListener(listener);
