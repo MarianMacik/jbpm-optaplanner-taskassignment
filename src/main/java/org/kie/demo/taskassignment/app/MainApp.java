@@ -59,7 +59,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("jBPM Task Assignment using OptaPlanner");
+        this.primaryStage.setTitle("Case Management Task Assignment Using OptaPlanner");
         registerOnCloseListener();
 
         initRootLayout();

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <solver>
-  <environmentMode>FULL_ASSERT</environmentMode>
-  <!--<environmentMode>REPRODUCIBLE</environmentMode>-->
+  <!--<environmentMode>FULL_ASSERT</environmentMode>-->
+  <environmentMode>REPRODUCIBLE</environmentMode>
 
   <solutionClass>org.kie.demo.taskassignment.planner.domain.TaskAssigningSolution</solutionClass>
   <entityClass>org.kie.demo.taskassignment.planner.domain.TaskOrUser</entityClass>
