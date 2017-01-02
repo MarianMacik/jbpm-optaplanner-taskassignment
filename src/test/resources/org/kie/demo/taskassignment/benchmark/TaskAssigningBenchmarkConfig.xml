@@ -11,6 +11,8 @@
       <inputSolutionFile>src/test/resources/org/kie/demo/taskassignment/benchmark/MediumScenario.xml</inputSolutionFile>
       <inputSolutionFile>src/test/resources/org/kie/demo/taskassignment/benchmark/LargeScenario.xml</inputSolutionFile>
       <problemStatisticType>BEST_SCORE</problemStatisticType>
+
+      <!-- An example of other metrics -->
       <!--<problemStatisticType>STEP_SCORE</problemStatisticType>-->
       <!--<problemStatisticType>SCORE_CALCULATION_SPEED</problemStatisticType>-->
       <!--<problemStatisticType>BEST_SOLUTION_MUTATION</problemStatisticType>-->
@@ -36,6 +38,7 @@
     </solver>
   </inheritedSolverBenchmark>
 
+  <!-- Intentionally commented since these are construction heuristics which are run separately from local searches -->
   <!--<solverBenchmark>-->
     <!--<name>First Fit</name>-->
     <!--<solver>-->
@@ -95,7 +98,4 @@
     </solver>
   </solverBenchmark>
 
-  <!--<solverBenchmarkBluePrint>-->
-    <!--<solverBenchmarkBluePrintType>EVERY_LOCAL_SEARCH_TYPE</solverBenchmarkBluePrintType>-->
-  <!--</solverBenchmarkBluePrint>-->
 </plannerBenchmark>
