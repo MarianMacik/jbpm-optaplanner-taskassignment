@@ -148,7 +148,7 @@ public class UserJSONParser {
 
             utx.commit();
         } catch (Exception e) {
-            throw new RuntimeException("There was a problem persisting a new UserSkill", e);
+            throw new RuntimeException("There was a problem persisting a new object", e);
         }
     }
 

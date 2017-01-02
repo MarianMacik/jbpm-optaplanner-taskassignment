@@ -39,7 +39,6 @@ public class TestIdentityProvider implements IdentityProvider {
         return roles.contains(role);
     }
 
-    // just for testing
     public void setRoles(List<String> roles) {
         this.roles = roles;
     }

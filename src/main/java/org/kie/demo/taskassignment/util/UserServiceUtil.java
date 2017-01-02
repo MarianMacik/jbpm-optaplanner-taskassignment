@@ -34,9 +34,7 @@ public class UserServiceUtil {
 
     public static List<User> getAllUsers() {
         EntityManager em = emf.createEntityManager();
-
         List<UserEntity> userEntities = em.createQuery("SELECT u from UserEntity u where u.name != :name", UserEntity.class).setParameter("name", ADMINISTRATOR_USER_NAME).getResultList();
-
         List<User> users = userEntities.stream().map(UserServiceUtil::mapUserEntityToUser).collect(Collectors.toList());
 
         em.close();
@@ -46,9 +44,7 @@ public class UserServiceUtil {
 
     public static List<String> getAllUserNames() {
         EntityManager em = emf.createEntityManager();
-
         List<String> userNames = em.createQuery("SELECT u.name from UserEntity u where u.name != :name", String.class).setParameter("name", ADMINISTRATOR_USER_NAME).getResultList();
-
         em.close();
 
         return userNames;
@@ -56,9 +52,7 @@ public class UserServiceUtil {
 
     public static List<String> getAllGroupNames() {
         EntityManager em = emf.createEntityManager();
-
         List<String> groupNames = em.createQuery("SELECT g.name from GroupEntity g", String.class).getResultList();
-
         em.close();
 
         return groupNames;
@@ -66,9 +60,7 @@ public class UserServiceUtil {
 
     public static List<String> getAllSkillNames() {
         EntityManager em = emf.createEntityManager();
-
         List<String> skillNames = em.createQuery("SELECT s.name from SkillEntity s", String.class).getResultList();
-
         em.close();
 
         return skillNames;

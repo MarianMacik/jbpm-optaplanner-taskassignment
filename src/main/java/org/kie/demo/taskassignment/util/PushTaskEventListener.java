@@ -13,8 +13,12 @@ import org.kie.demo.taskassignment.planner.domain.Priority;
 import org.kie.demo.taskassignment.planner.domain.TaskAssigningSolution;
 import org.kie.demo.taskassignment.planner.domain.TaskOrUser;
 import org.kie.demo.taskassignment.planner.domain.TaskPlanningEntity;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class PushTaskEventListener extends DefaultTaskEventListener {
+
+    private static final Logger logger = LoggerFactory.getLogger(PushTaskEventListener.class);
 
     private List<TaskPlanningEntity> tasks;
 
@@ -26,20 +30,19 @@ public class PushTaskEventListener extends DefaultTaskEventListener {
     }
 
     /*
-    * Conversion to planning entities will be done in every event listener
-    *
+    * Conversion to planning entities is done in every event listener
     *
     * */
 
     @Override
     public void afterTaskAddedEvent(TaskEvent event) {
-        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Task has been added " + event.getTask().getName() + " " + event.getTask().getId());
+        logger.debug("Task has been added " + event.getTask().getName() + " " + event.getTask().getId());
         // no need to load task input variables since they are available immediately in this type of event
         TaskPlanningEntity newTask = mapTaskToPlanningEntity(event.getTask());
 
 
         // only problem fact add should be called
-        // if (is there a loaded solution on a controller - add it via problem fact change, otherwise simply add it as before to tasks list)
+        // if there is a loaded solution on a controller - add it via problem fact change, otherwise simply add it to tasks list
         if (solutionController.isSolutionLoaded()) {
             solutionController.doProblemFactChange(scoreDirector -> {
                 TaskAssigningSolution solution = scoreDirector.getWorkingSolution();
@@ -55,12 +58,9 @@ public class PushTaskEventListener extends DefaultTaskEventListener {
 
     @Override
     public void afterTaskClaimedEvent(TaskEvent event) {
-        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Task has been claimed " + event.getTask().getName() + " " + event.getTask().getId());
+        logger.debug("Task has been claimed " + event.getTask().getName() + " " + event.getTask().getId());
         // in this type of event we need to load task variables
         event.getTaskContext().loadTaskVariables(event.getTask());
-//        TaskPlanningEntity newTask = mapTaskToPlanningEntity(event.getTask());
-//        int taskIndex = tasks.indexOf(newTask);
-//        tasks.set(taskIndex, newTask);
 
         solutionController.doProblemFactChange(scoreDirector -> {
             TaskAssigningSolution solution = scoreDirector.getWorkingSolution();
@@ -75,18 +75,13 @@ public class PushTaskEventListener extends DefaultTaskEventListener {
             }
             scoreDirector.triggerVariableListeners();
         });
-
-        // only problem fact changed should be called - find task in solution and change its status
     }
 
     @Override
     public void afterTaskStartedEvent(TaskEvent event) {
-        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Task has been started " + event.getTask().getName() + " " + event.getTask().getId());
+        logger.debug("Task has been started " + event.getTask().getName() + " " + event.getTask().getId());
         // in this type of event we need to load task variables
         event.getTaskContext().loadTaskVariables(event.getTask());
-//        TaskPlanningEntity newTask = mapTaskToPlanningEntity(event.getTask());
-//        int taskIndex = tasks.indexOf(newTask);
-//        tasks.set(taskIndex, newTask);
 
         solutionController.doProblemFactChange(scoreDirector -> {
             TaskAssigningSolution solution = scoreDirector.getWorkingSolution();
@@ -100,16 +95,12 @@ public class PushTaskEventListener extends DefaultTaskEventListener {
             }
             scoreDirector.triggerVariableListeners();
         });
-
-
-        // only problem fact changed should be called - find task in solution and change its status
     }
 
     @Override
     public void afterTaskCompletedEvent(TaskEvent event) {
-        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Task has been completed " + event.getTask().getName() + " " + event.getTask().getId());
+        logger.debug("Task has been completed " + event.getTask().getName() + " " + event.getTask().getId());
         event.getTaskContext().loadTaskVariables(event.getTask());
-        // tasks.remove(mapTaskToPlanningEntity(event.getTask()));
 
         // find this task in solution and set next task so it does not point to this task, but points to null
         // remove problem fact - task - from task collection
@@ -138,9 +129,7 @@ public class PushTaskEventListener extends DefaultTaskEventListener {
             prevTaskOrUser.setNextTask(null);
             scoreDirector.afterVariableChanged(prevTaskOrUser,"nextTask");
 
-            //scoreDirector.beforeVariableChanged(completedTask,"previousTaskOrUser");
             completedTask.setPreviousTaskOrUser(null);
-            //scoreDirector.afterVariableChanged(completedTask,"previousTaskOrUser");
 
             scoreDirector.beforeVariableChanged(completedTask,"nextTask");
             completedTask.setNextTask(null);
@@ -159,7 +148,7 @@ public class PushTaskEventListener extends DefaultTaskEventListener {
     @Override
     public void afterTaskExitedEvent(TaskEvent event) {
         // Task is exited when there is a cancelCase or a destroyCase command called
-        System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Task has been exited " + event.getTask().getName() + " " + event.getTask().getId());
+        logger.debug("Task has been exited " + event.getTask().getName() + " " + event.getTask().getId());
         event.getTaskContext().loadTaskVariables(event.getTask());
         tasks.remove(mapTaskToPlanningEntity(event.getTask()));
     }
@@ -168,7 +157,6 @@ public class PushTaskEventListener extends DefaultTaskEventListener {
         TaskPlanningEntity taskPlanningEntity = new TaskPlanningEntity();
 
         taskPlanningEntity.setId(engineTask.getId());
-        // engineTask.getName() cannot be used as this returns the node name and then we cannot use a signal to a custom-named node, e.g. #{caseFile_TaskName}
         taskPlanningEntity.setName(engineTask.getTaskData().getTaskInputVariables().get("TaskName").toString());
 
         User actualOwner = engineTask.getTaskData().getActualOwner();
