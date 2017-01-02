@@ -1,10 +1,7 @@
 package org.kie.demo.taskassignment.planner;
 
-import java.util.Objects;
-
 import org.kie.demo.taskassignment.planner.domain.TaskOrUser;
 import org.kie.demo.taskassignment.planner.domain.TaskPlanningEntity;
-import org.kie.demo.taskassignment.planner.domain.User;
 import org.optaplanner.core.impl.domain.variable.listener.VariableListener;
 import org.optaplanner.core.impl.score.director.ScoreDirector;
 
@@ -44,22 +41,13 @@ public class StartTimeUpdatingVariableListener implements VariableListener<TaskP
         TaskOrUser previous = sourceTask.getPreviousTaskOrUser();
         TaskPlanningEntity shadowTask = sourceTask;
         Integer startTime = (previous == null ? null : previous.getEndTime());
-        // Integer startTime = calculateStartTime(shadowTask, previousEndTime);
-        while (shadowTask != null /*&& !Objects.equals(shadowTask.getStartTime(), startTime)*/) {
+        while (shadowTask != null) {
             scoreDirector.beforeVariableChanged(shadowTask, "startTime");
             shadowTask.setStartTime(startTime);
             scoreDirector.afterVariableChanged(shadowTask, "startTime");
             startTime = shadowTask.getEndTime();
             shadowTask = shadowTask.getNextTask();
-            // startTime = calculateStartTime(shadowTask, previousEndTime);
         }
     }
-
-//    private Integer calculateStartTime(TaskPlanningEntity task, Integer previousEndTime) {
-//        if (task == null || previousEndTime == null) {
-//            return null;
-//        }
-//        return Math.max(task.getReadyTime(), previousEndTime);
-//    }
 
 }

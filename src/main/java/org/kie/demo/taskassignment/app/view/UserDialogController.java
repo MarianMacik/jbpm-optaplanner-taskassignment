@@ -31,10 +31,6 @@ public class UserDialogController {
     @FXML
     private GridPane gridPane;
 
-
-
-
-
     public void setUserFields(User user) {
         nameLabel.setText(user.getName());
         groupLabel.setText(user.getGroups().stream().map(Group::getName).collect(Collectors.joining(", ")));
@@ -49,7 +45,6 @@ public class UserDialogController {
             Skill skill = skillEntries.get(i);
             Insets insets = new Insets(3);
 
-            //Label skillLabel = new Label(skill.getName() + " : " + skill.getSkillLevel());
             Label nameLabel = new Label(skill.getName() + ":");
             nameLabel.setPadding(insets);
             nameLabel.setPrefWidth(prefWidth/2);

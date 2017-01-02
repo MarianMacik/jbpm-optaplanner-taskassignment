@@ -14,10 +14,6 @@ public class UserGroupEntity implements Serializable{
     @EmbeddedId
     private UserGroupId primaryKey = new UserGroupId();
 
-    //skill of the user for the particular "group"
-    //private long skill;
-
-
     public UserGroupEntity() {
     }
 

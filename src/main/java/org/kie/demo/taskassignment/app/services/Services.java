@@ -1,13 +1,10 @@
 package org.kie.demo.taskassignment.app.services;
 
-import static java.util.stream.Collectors.toMap;
 import static org.kie.scanner.MavenRepository.getMavenRepository;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FilenameFilter;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,16 +16,10 @@ import javax.persistence.EntityManagerFactory;
 import javax.transaction.UserTransaction;
 
 import bitronix.tm.resource.jdbc.PoolingDataSource;
-import org.dashbuilder.DataSetCore;
 import org.drools.compiler.kie.builder.impl.InternalKieModule;
 import org.jbpm.casemgmt.api.CaseRuntimeDataService;
 import org.jbpm.casemgmt.api.CaseService;
 import org.jbpm.casemgmt.api.generator.CaseIdGenerator;
-import org.jbpm.casemgmt.api.model.AdHocFragment;
-import org.jbpm.casemgmt.api.model.CaseDefinition;
-import org.jbpm.casemgmt.api.model.CaseMilestone;
-import org.jbpm.casemgmt.api.model.CaseRole;
-import org.jbpm.casemgmt.api.model.CaseStage;
 import org.jbpm.casemgmt.api.model.instance.CaseFileInstance;
 import org.jbpm.casemgmt.impl.CaseRuntimeDataServiceImpl;
 import org.jbpm.casemgmt.impl.CaseServiceImpl;
@@ -53,7 +44,6 @@ import org.jbpm.services.api.ProcessService;
 import org.jbpm.services.api.RuntimeDataService;
 import org.jbpm.services.api.UserTaskService;
 import org.jbpm.services.api.model.DeploymentUnit;
-import org.jbpm.services.api.model.UserTaskDefinition;
 import org.jbpm.services.api.query.QueryService;
 import org.jbpm.services.task.HumanTaskServiceFactory;
 import org.jbpm.services.task.audit.TaskAuditServiceFactory;
@@ -127,22 +117,7 @@ public class Services {
 
     private String deploymentId;
 
-    private static final String TEST_DOC_STORAGE = "target/docs";
-
-    protected static final String EMPTY_CASE_P_ID = "EmptyCase";
-    protected static final String USER_TASK_STAGE_CASE_P_ID = "UserTaskWithStageCase";
-    protected static final String USER_TASK_CASE_P_ID = "UserTaskCase";
-    protected static final String USER_TASK_STAGE_AUTO_START_CASE_P_ID = "UserTaskWithStageCaseAutoStart";
-    protected static final String USER_TASK_STAGE_ADHOC_CASE_P_ID = "UserStageAdhocCase";
-    protected static final String NO_START_NODE_CASE_P_ID = "NoStartNodeAdhocCase";
-
-    protected static final String SUBPROCESS_P_ID = "DataVerification";
-
-    protected static final String FIRST_CASE_ID = "CASE-0000000001";
-    protected static final String HR_CASE_ID = "HR-0000000001";
-
-    protected void close() {
-        DataSetCore.set(null);
+    public void close() {
         if (emf != null) {
             emf.close();
         }
@@ -153,7 +128,6 @@ public class Services {
     public Services() {
         configureServices();
         // users are inserted when the scenario is loaded
-        //insertSmallScenarioUsers();
         deployCases();
     }
 
@@ -247,72 +221,6 @@ public class Services {
         File file = new File("src/main/resources/org/kie/demo/taskassignment/db/usersToTest.json");
 
         userJSONParser.insertUsersFromFile(file);
-//        EntityManager em = emf.createEntityManager();
-//
-//        UserEntity mary = new UserEntity("mary");
-//        UserEntity john = new UserEntity("john");
-//        UserEntity marian = new UserEntity("marian");
-//        UserEntity admin = new UserEntity("Administrator");
-//
-//
-//        GroupEntity suppliers = new GroupEntity("suppliers");
-//        GroupEntity managers = new GroupEntity("managers");
-//
-//        // mapping of users and groups
-//        UserGroupEntity marySuppliers = new UserGroupEntity(mary, suppliers);
-//        UserGroupEntity johnManagers = new UserGroupEntity(john, managers);
-//
-//        // marian does not belong to any group
-//
-//        SkillEntity management = new SkillEntity("management");
-//        SkillEntity delivering = new SkillEntity("delivering");
-//
-//        // mapping of users and skills
-//        UserSkillEntity managementMary = new UserSkillEntity(mary, management, SkillLevel.EXPERT);
-//        UserSkillEntity deliveringMary = new UserSkillEntity(mary, delivering, SkillLevel.BEGINNER);
-//
-//        UserSkillEntity managementJohn = new UserSkillEntity(john, management, SkillLevel.BEGINNER);
-//        UserSkillEntity deliveringJohn = new UserSkillEntity(john, delivering, SkillLevel.EXPERT);
-//
-//        UserSkillEntity managementMarian = new UserSkillEntity(marian, management, SkillLevel.ADVANCED);
-//        UserSkillEntity deliveringmarian = new UserSkillEntity(marian, delivering, SkillLevel.ADVANCED);
-//
-//
-//
-//        try {
-//            UserTransaction utx = (UserTransaction) new InitialContext().lookup("java:comp/UserTransaction");
-//            utx.begin();
-//            em.joinTransaction();
-//
-//            em.persist(john);
-//            em.persist(mary);
-//            em.persist(admin);
-//            em.persist(marian);
-//
-//            em.persist(suppliers);
-//            em.persist(managers);
-//
-//            em.persist(marySuppliers);
-//            em.persist(johnManagers);
-//
-//            em.persist(management);
-//            em.persist(delivering);
-//
-//            em.persist(managementMary);
-//            em.persist(deliveringMary);
-//            em.persist(managementJohn);
-//            em.persist(deliveringJohn);
-//            em.persist(managementMarian);
-//            em.persist(deliveringmarian);
-//
-//            utx.commit();
-//        } catch (Exception e) {
-//            throw new RuntimeException("Problem with DB", e);
-//        } finally {
-//            if (em.isOpen()) {
-//                em.close();
-//            }
-//        }
     }
 
     public void insertMediumScenarioUsers() {
@@ -347,15 +255,6 @@ public class Services {
 
 
     public void deployCases() {
-        System.setProperty("org.jbpm.document.storage", TEST_DOC_STORAGE);
-        deleteFolder(TEST_DOC_STORAGE);
-
-        // Users will be obtained from DB only after the problem (solution) is loaded
-//        UserServiceUtil.setEmf(emf);
-//        users = UserServiceUtil.getAllUsers();
-
-
-
         KieServices ks = KieServices.Factory.get();
         ReleaseId releaseId = ks.newReleaseId(GROUP_ID, ARTIFACT_ID, VERSION);
         List<String> processes = new ArrayList<String>();
@@ -389,14 +288,6 @@ public class Services {
     }
 
     public String startCase(String caseDefinitionId, Map<String, OrganizationalEntity> roleAssignments) {
-        // let's assign users to roles so they can be participants in the case
-
-//        Map<String, OrganizationalEntity> roleAssignments = new HashMap<>();
-//        roleAssignments.put("manager", new UserImpl("john"));
-//        roleAssignments.put("supplier", new UserImpl("marian"));
-//        roleAssignments.put("SUPP", new GroupImpl("suppliers"));
-
-
         // start new instance of a case with data and role assignment
         Map<String, Object> data = new HashMap<>();
         CaseFileInstance caseFile = caseService.newCaseFileInstance(deploymentId, caseDefinitionId, data, roleAssignments);
@@ -404,7 +295,6 @@ public class Services {
 
         activeCaseIds.add(caseId);
 
-        // Probably not needed
         return caseId;
     }
 
@@ -579,25 +469,6 @@ public class Services {
         }
     }
 
-    public static void cleanupSingletonSessionId() {
-        File tempDir = new File(System.getProperty("java.io.tmpdir"));
-        if (tempDir.exists()) {
-
-            String[] jbpmSerFiles = tempDir.list(new FilenameFilter() {
-
-                @Override
-                public boolean accept(File dir, String name) {
-
-                    return name.endsWith("-jbpmSessionId.ser");
-                }
-            });
-            for (String file : jbpmSerFiles) {
-                logger.debug("Temp dir to be removed {} file {}", tempDir, file);
-                new File(tempDir, file).delete();
-            }
-        }
-    }
-
     public void setDeploymentService(DeploymentService deploymentService) {
         this.deploymentService = deploymentService;
     }
@@ -670,31 +541,6 @@ public class Services {
         return emf;
     }
 
-    //    protected static void waitForTheOtherThreads(CyclicBarrier barrier) {
-//        try {
-//            barrier.await();
-//        } catch (InterruptedException e) {
-//            fail("Thread 1 was interrupted while waiting for the other threads!");
-//        } catch (BrokenBarrierException e) {
-//            fail("Thread 1's barrier was broken while waiting for the other threads!");
-//        }
-//    }
-//
-    protected void deleteFolder(String pathStr) {
-        File path = new File(pathStr);
-        if (path.exists()) {
-            File[] directories = path.listFiles();
-            if (directories != null) {
-                for (File file : directories) {
-                    if (file.isDirectory()) {
-                        deleteFolder(file.getAbsolutePath());
-                    }
-                    file.delete();
-                }
-            }
-        }
-    }
-
     protected List<ObjectModel> getProcessListeners() {
         return new ArrayList<>();
     }
@@ -703,30 +549,6 @@ public class Services {
         List<ObjectModel> listeners = new ArrayList<>();
         listeners.add(new ObjectModel("mvel", "org.kie.demo.taskassignment.util.PushTaskEventListenerFactory.get(org.kie.demo.taskassignment.app.MainApp.tasks, org.kie.demo.taskassignment.app.MainApp.solutionController)"));
         return listeners;
-    }
-
-    protected Map<String, CaseDefinition> mapCases(Collection<CaseDefinition> cases) {
-        return cases.stream().collect(toMap(CaseDefinition::getId, c -> c));
-    }
-
-    protected Map<String, CaseRole> mapRoles(Collection<CaseRole> caseRoles) {
-        return caseRoles.stream().collect(toMap(CaseRole::getName, c -> c));
-    }
-
-    protected Map<String, CaseMilestone> mapMilestones(Collection<CaseMilestone> caseMilestones) {
-        return caseMilestones.stream().collect(toMap(CaseMilestone::getName, c -> c));
-    }
-
-    protected Map<String, CaseStage> mapStages(Collection<CaseStage> caseStages) {
-        return caseStages.stream().collect(toMap(CaseStage::getName, c -> c));
-    }
-
-    protected Map<String, UserTaskDefinition> mapTasksDef(Collection<UserTaskDefinition> tasks) {
-        return tasks.stream().collect(toMap(UserTaskDefinition::getName, t -> t));
-    }
-
-    protected Map<String, AdHocFragment> mapAdHocFragments(Collection<AdHocFragment> adHocFragments) {
-        return adHocFragments.stream().collect(toMap(AdHocFragment::getName, t -> t));
     }
 
 }

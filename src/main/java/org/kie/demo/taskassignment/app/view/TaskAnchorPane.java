@@ -62,16 +62,6 @@ public class TaskAnchorPane extends AnchorPane {
         Map<User, Integer> userIndexMap = new HashMap<>(users.size());
         int userIndex = 0;
         for (User user : users) {
-//            Label userLabel = new Label(user.getName());
-//            userLabel.setOpacity(1);
-//            userLabel.setTooltip(new Tooltip(user.getName()));
-//            userLabel.setLayoutX(0);
-//            userLabel.setLayoutY(HEADER_ROW_HEIGHT + userIndex * ROW_HEIGHT);
-//            userLabel.setPrefWidth(HEADER_COLUMN_WIDTH);
-//            userLabel.setPrefHeight(ROW_HEIGHT);
-//            userLabel.setStyle("-fx-border-color: black");
-//            getChildren().add(userLabel);
-
             Button userButton = new Button(user.getName());
             userButton.setOpacity(1);
             userButton.setLayoutX(0);
@@ -97,7 +87,6 @@ public class TaskAnchorPane extends AnchorPane {
                 x = HEADER_COLUMN_WIDTH + task.getStartTime();
                 y = HEADER_ROW_HEIGHT + userIndexMap.get(task.getUser()) * ROW_HEIGHT;
             } else {
-                //x = HEADER_COLUMN_WIDTH + task.getReadyTime();
                 if (task.getStartTime() == null) {
                     x = HEADER_COLUMN_WIDTH;
                 } else {
@@ -128,17 +117,6 @@ public class TaskAnchorPane extends AnchorPane {
             timeLabel.setPrefHeight(ROW_HEIGHT);
             getChildren().add(timeLabel);
         }
-        if ((panelWidth - HEADER_COLUMN_WIDTH) % TIME_COLUMN_WIDTH != 0) {
-            panelWidth = panelWidth - ((panelWidth - HEADER_COLUMN_WIDTH) % TIME_COLUMN_WIDTH) + TIME_COLUMN_WIDTH;
-        }
-        //setWidth(panelWidth);
-        //setPrefWidth(panelWidth);
-
-
-//        Dimension size = new Dimension(panelWidth, HEADER_ROW_HEIGHT + unassignedIndex * ROW_HEIGHT);
-//        setSize(size);
-//        setPreferredSize(size);
-//        repaint();
     }
 
     private Button createTaskButton(TaskPlanningEntity task) {

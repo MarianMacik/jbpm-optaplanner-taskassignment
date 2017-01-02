@@ -96,17 +96,12 @@ public class SolutionController {
 
     public void registerForBestSolutionChanges() {
         solver.addEventListener(event -> {
-            // Called on the Solver thread, so not on the Swing Event thread
-            /*
-             * Avoid ConcurrentModificationException when there is an unprocessed ProblemFactChange
-             * because the paint method uses the same problem facts instances as the Solver's workingSolution
-             * unlike the planning entities of the bestSolution which are cloned from the Solver's workingSolution
-             */
+            // Called on the Solver thread, so not on the JavaFX Event thread
             if (solver.isEveryProblemFactChangeProcessed()) {
                 // The final is also needed for thread visibility
                 final TaskAssigningSolution latestBestSolution = event.getNewBestSolution();
                 Platform.runLater(() -> {
-                    // Called on the Swing Event thread
+                    // Called on the JavaFX Event thread
                     // TODO by the time we process this event, a newer bestSolution might already be queued
                     guiScoreDirector.setWorkingSolution(latestBestSolution);
                     mainApp.bestSolutionChanged();
@@ -116,47 +111,23 @@ public class SolutionController {
     }
 
     public void doProblemFactChange(ProblemFactChange<TaskAssigningSolution> problemFactChange) {
-//        if (solver.isSolving()) {
-//            solver.addProblemFactChange(problemFactChange);
-//        } else {
         problemFactChange.doChange(guiScoreDirector);
         guiScoreDirector.calculateScore();
         mainApp.updatePane();
     }
 
     private void setSolvingState(boolean solving) {
-
-        // Probably disable opening new cases and opening predefined cases
-//        importAction.setEnabled(!solving && solutionBusiness.hasImporter());
-//        openAction.setEnabled(!solving);
-//        saveAction.setEnabled(!solving);
-//        exportAction.setEnabled(!solving && solutionBusiness.hasExporter());
-//        solveAction.setEnabled(!solving);
         solveButton.setVisible(!solving);
-        // terminateSolvingEarlyAction.setEnabled(solving);
         terminateSolvingEarlyButton.setVisible(solving);
-        HBox hBox;
         if (solving) {
-//            hBox = (HBox)solveButton.getParent();
-//            hBox.getChildren().clear();
-//            hBox.getChildren().add(terminateSolvingEarlyButton);
             terminateSolvingEarlyButton.requestFocus();
             progressBar.setProgress(ProgressIndicator.INDETERMINATE_PROGRESS);
             progressBarText.setText("Solving...");
         } else {
-//            hBox = (HBox) terminateSolvingEarlyButton.getParent();
-//            hBox.getChildren().clear();
-//            hBox.getChildren().add(solveButton);
             solveButton.requestFocus();
             progressBar.setProgress(0);
             progressBarText.setText(null);
         }
-
-//        solutionPanel.setEnabled(!solving);
-//        progressBar.setIndeterminate(solving);
-//        progressBar.setStringPainted(solving);
-//        progressBar.setString(solving ? "Solving..." : null);
-//        showConstraintMatchesDialogAction.setEnabled(!solving);
     }
 
     @FXML

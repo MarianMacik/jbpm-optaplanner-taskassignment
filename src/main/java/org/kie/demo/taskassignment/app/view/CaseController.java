@@ -121,10 +121,7 @@ public class CaseController {
                 setSolutionLoading(false);
             }
         };
-        //scenarioTask.setOnSucceeded(event -> );
         new Thread(scenarioTask).start();
-        //createCustomTaskButton.setDisable(false);
-        // re-enable buttons after the solution is loaded
     }
 
     @FXML

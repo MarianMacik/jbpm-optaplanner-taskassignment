@@ -47,8 +47,7 @@ public class TaskPlanningEntity extends TaskOrUser{
     // skill needed for this task
     private String skill;
 
-    // interested mostly in priority, skill needed - to calculate endTime, and startTime/readyTime - startTime will be
-    // updated automatically via listener, readyTime can be added in the future, not som important
+    // things like readyTime can be added in the future, not som important now
     private Map<String, Object> inputVariables = new HashMap<>();
 
 
@@ -69,8 +68,6 @@ public class TaskPlanningEntity extends TaskOrUser{
     private User user;
 
     @CustomShadowVariable(variableListenerClass = StartTimeUpdatingVariableListener.class,
-            // Arguable, to adhere to API specs (although this works), nextTask and employee should also be a source,
-            // because this shadow must be triggered after nextTask and employee (but there is no need to be triggered by those)
             sources = {@PlanningVariableReference(variableName = "previousTaskOrUser"), @PlanningVariableReference(variableName = "user")})
     private Integer startTime;
 
@@ -207,7 +204,7 @@ public class TaskPlanningEntity extends TaskOrUser{
     @Override
     public String toString() {
         return "TaskPlanningEntity{" +
-//                "previousTaskOrUser=" + previousTaskOrUser +
+                "previousTaskOrUser=" + previousTaskOrUser +
                 ", user=" + user +
                 ", startTime=" + startTime +
                 ", endTime=" + getEndTime() +
@@ -229,11 +226,6 @@ public class TaskPlanningEntity extends TaskOrUser{
         } else {
             return (user.getGroups().stream().anyMatch(potentialGroupOwners::contains));
         }
-//            for (Group group : user.getGroups()) {
-//                if (potentialGroupOwners.contains(group)) {
-//                    return true;
-//                }
-//            }
     }
 
 
@@ -252,7 +244,6 @@ public class TaskPlanningEntity extends TaskOrUser{
         if (user != null) {
             skillLevel = user.getSkills().get(skill).getSkillLevel();
         }
-        // TODO Implement getDuration method which will compute real duration based on assigned user's level of skill for this task
         Integer realDuration = skillLevel.getDurationMultiplier() * baseDuration;
 
         return realDuration;
