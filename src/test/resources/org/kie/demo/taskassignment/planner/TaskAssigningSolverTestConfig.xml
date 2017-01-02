@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver>
+  <environmentMode>FULL_ASSERT</environmentMode>
+  <!--<environmentMode>REPRODUCIBLE</environmentMode>-->
+
+  <solutionClass>org.kie.demo.taskassignment.planner.domain.TaskAssigningSolution</solutionClass>
+  <entityClass>org.kie.demo.taskassignment.planner.domain.TaskOrUser</entityClass>
+  <entityClass>org.kie.demo.taskassignment.planner.domain.TaskPlanningEntity</entityClass>
+
+  <scoreDirectorFactory>
+    <scoreDrl>org/kie/demo/taskassignment/planner/TaskAssigningScoreRules.drl</scoreDrl>
+  </scoreDirectorFactory>
+
+  <termination>
+    <secondsSpentLimit>15</secondsSpentLimit>
+  </termination>
+
+    <constructionHeuristic/>
+    <localSearch>
+      <localSearchType>HILL_CLIMBING</localSearchType>
+    </localSearch>
+</solver>
