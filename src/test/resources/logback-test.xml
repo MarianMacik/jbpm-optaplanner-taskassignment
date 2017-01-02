@@ -9,6 +9,8 @@
     </encoder>
   </appender>
 
+  <!-- this project -->
+  <logger name="org.kie.demo.taskassignment" level="debug"/>
 
   <!-- jbpm -->
   <logger name="org.jbpm" level="info"/>
