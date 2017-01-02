@@ -16,8 +16,7 @@ import org.optaplanner.core.api.domain.variable.PlanningVariable;
 import org.optaplanner.core.api.domain.variable.PlanningVariableGraphType;
 import org.optaplanner.core.api.domain.variable.PlanningVariableReference;
 
-@PlanningEntity(/*movableEntitySelectionFilter = MovableTaskSelectionFilter.class,*/
-        difficultyComparatorClass = TaskDifficultyComparator.class)
+@PlanningEntity(difficultyComparatorClass = TaskDifficultyComparator.class)
 @XStreamAlias("TaskPlanningEntity")
 public class TaskPlanningEntity extends TaskOrUser{
 
