@@ -18,10 +18,10 @@
         <drools:metaValue><![CDATA[managers,economists,headManager]]></drools:metaValue>
       </drools:metaData>
     </bpmn2:extensionElements>
-    <bpmn2:userTask id="_55ECC37D-B667-4A7E-9F48-552D1E3595B9" drools:selectable="true" drools:scriptFormat="http://www.java.com/java" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Consult contract">
+    <bpmn2:userTask id="_55ECC37D-B667-4A7E-9F48-552D1E3595B9" drools:selectable="true" drools:scriptFormat="http://www.java.com/java" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Consult Contract">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[Consult contract]]></drools:metaValue>
+          <drools:metaValue><![CDATA[Consult Contract]]></drools:metaValue>
         </drools:metaData>
         <drools:metaData name="customAutoStart">
           <drools:metaValue><![CDATA[true]]></drools:metaValue>
@@ -47,7 +47,7 @@
       <bpmn2:dataInputAssociation id="_wPd9BMVxEeaJ8r3_otKL2g">
         <bpmn2:targetRef>_55ECC37D-B667-4A7E-9F48-552D1E3595B9_TaskNameInputX</bpmn2:targetRef>
         <bpmn2:assignment id="_wPd9BcVxEeaJ8r3_otKL2g">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_wPd9BsVxEeaJ8r3_otKL2g">Consult contract</bpmn2:from>
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_wPd9BsVxEeaJ8r3_otKL2g">Consult Contract</bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_wPd9B8VxEeaJ8r3_otKL2g">_55ECC37D-B667-4A7E-9F48-552D1E3595B9_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
