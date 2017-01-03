@@ -209,12 +209,6 @@
       <artifactId>drools-core</artifactId>
       <type>test-jar</type>
     </dependency>
-    <!--<dependency>
-      <groupId>org.kie</groupId>
-      <artifactId>kie-ci</artifactId>
-      <type>test-jar</type>
-      <scope>test</scope>
-    </dependency>-->
 
     <dependency>
       <groupId>junit</groupId>
